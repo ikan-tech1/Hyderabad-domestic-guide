@@ -998,82 +998,127 @@ body { margin-bottom: 0; }
 
 
 /* === IKAN INDIA-GUIDE POLISH LAYER === */
-/* IKAN India-guide polish layer — CSS-only, appended after base CSS.
-   Refines typography, spacing, chapter numerals, cards, quotes to the
-   india-cultural-guide visual standard. No markup/content changes. */
+/* ============================================================
+   IKAN India-guide DEEP design layer — CSS-only, content-safe.
+   Elevates typography, layout rhythm, section openers, chapter
+   numerals, cards, stats, photos, quotes to editorial standard.
+   ============================================================ */
 
-/* — Base typography — */
-body{font-family:"Lexend Deca",-apple-system,system-ui,sans-serif;font-weight:400;letter-spacing:-0.005em}
+/* ---------- Base typography ---------- */
+body{font-family:"Lexend Deca",-apple-system,system-ui,sans-serif;font-weight:400;letter-spacing:-0.005em;line-height:1.6}
 
-/* — Headlines: Space Grotesk, tightened — */
-.hero-title{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-0.04em;line-height:0.95}
-.hero-ghost{font-family:"Crimson Pro",serif;font-style:italic;font-weight:500}
-.sec-title{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-0.025em;line-height:1.04;color:var(--teal)}
-.sec-title-lt{color:#fff}
-.sec-title em,.sec-title i,.hero-title em{font-family:"Crimson Pro",serif;font-style:italic;font-weight:500;color:var(--acc);letter-spacing:-0.01em}
+.hero-title{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-0.045em;line-height:0.92}
+.hero-ghost{font-family:"Crimson Pro",serif;font-style:italic;font-weight:500;letter-spacing:-0.01em}
+.hero-subtitle{font-family:"Crimson Pro",serif;font-size:19px;font-style:italic;font-weight:400}
+.sec-title{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-0.028em;line-height:1.03;
+  font-size:clamp(36px,4.6vw,60px)}
+.sec-title em,.sec-title i,.hero-title em{font-family:"Crimson Pro",serif;font-style:italic;font-weight:500;color:var(--acc);letter-spacing:-0.005em}
 
-/* — Eyebrow: coral, Space Grotesk, trailing rule (India spec) — */
-.eyebrow{font-family:"Space Grotesk",sans-serif;font-size:10.5px;font-weight:600;
-  color:var(--acc);letter-spacing:0.22em;text-transform:uppercase;
-  display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.eyebrow::after{content:"";flex:0 0 36px;height:1.5px;background:var(--acc);opacity:.55}
-.eyebrow-lt{color:var(--sky)}
-.eyebrow-lt::after{background:var(--sky);opacity:.4}
+/* ---------- Section openers: editorial rhythm ---------- */
+.eyebrow{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:600;
+  color:var(--acc);letter-spacing:0.24em;text-transform:uppercase;
+  display:flex;align-items:center;gap:13px;margin-bottom:18px}
+.eyebrow::after{content:"";flex:0 0 42px;height:1.5px;background:var(--acc);opacity:.6}
+.eyebrow-lt{color:var(--sky)}.eyebrow-lt::after{background:var(--sky);opacity:.45}
+.sec-sub{font-family:"Crimson Pro",serif;font-weight:400;font-size:19px;font-style:italic;
+  line-height:1.62;color:var(--muted);max-width:680px;margin-bottom:52px}
+.sec-sub-lt{color:rgba(172,216,213,.78)}
 
-/* — Section sub: Lexend Deca, airy — */
-.sec-sub{font-family:"Lexend Deca",sans-serif;font-weight:300;font-size:15.5px;
-  line-height:1.85;color:var(--muted);max-width:660px;margin-bottom:46px}
-.sec-sub-lt{color:rgba(172,216,213,.72)}
+/* ---------- Section rhythm: generous editorial padding ---------- */
+.sec{padding:108px 84px;position:relative;overflow:hidden}
+@media(max-width:900px){.sec{padding:68px 34px}}
+@media(max-width:600px){.sec{padding:52px 22px}}
 
-/* — Section rhythm: generous India padding — */
-.sec{padding:94px 80px;position:relative}
-@media(max-width:900px){.sec{padding:64px 34px}}
-@media(max-width:600px){.sec{padding:48px 22px}}
+/* ---------- Chapter numerals: giant ghosted editorial index ---------- */
+body{counter-reset:ikch}
+.sec{counter-increment:ikch}
+.sec::before{
+  content:counter(ikch,decimal-leading-zero);
+  position:absolute;top:46px;right:64px;z-index:0;
+  font-family:"Space Grotesk",sans-serif;font-weight:700;
+  font-size:170px;line-height:.8;letter-spacing:-0.05em;
+  color:var(--teal);opacity:.06;pointer-events:none;user-select:none}
+.s-dark::before,.rf-section::before{color:#ACD8D5;opacity:.09}
+.sec>*{position:relative;z-index:1}
+/* fix collisions with ID-targeted decorative pseudo-elements */
+#overview::before{content:counter(ikch,decimal-leading-zero)!important;
+  width:auto!important;height:auto!important;border:0!important;border-radius:0!important;
+  top:46px!important;right:64px!important;left:auto!important;bottom:auto!important;
+  background:none!important;font-size:170px!important;opacity:.06!important}
+#climate{background-image:radial-gradient(ellipse at 84% 16%,rgba(172,216,213,.10) 0%,transparent 52%)}
+#climate::before{content:counter(ikch,decimal-leading-zero)!important;background:none!important;
+  width:auto!important;height:auto!important}
+@media(max-width:900px){.sec::before,#overview::before{font-size:104px!important;top:30px!important;right:26px!important}}
 
-/* — Decorative circle motif (India signature) on dark sections — */
-.s-dark,.rf-section{position:relative;overflow:hidden}
+/* ---------- Decorative concentric circles on dark sections ---------- */
+.s-dark::after,.rf-section::after{
+  content:"";position:absolute;top:-160px;right:-120px;width:340px;height:340px;
+  border-radius:50%;border:1.5px solid rgba(172,216,213,.10);
+  box-shadow:0 0 0 60px transparent,inset 0 0 0 60px transparent,
+    0 0 0 1px transparent;pointer-events:none;z-index:0}
+.s-dark .sec-title,.s-dark .eyebrow,.rf-section .sec-title{position:relative;z-index:1}
 
-/* — Nav: India midnight glass — */
-.nav{background:rgba(19,69,80,.97);backdrop-filter:saturate(160%) blur(18px);
-  border-bottom:1px solid rgba(172,216,213,.14)}
-.nav-links a{font-family:"Space Grotesk",sans-serif;font-weight:500;letter-spacing:.08em}
-.nav-badge{font-family:"Space Grotesk",sans-serif;background:rgba(241,89,63,.14);
-  border:1px solid rgba(241,89,63,.4);color:var(--acc);font-weight:600}
+/* ---------- Nav: India midnight glass ---------- */
+.nav{background:rgba(19,69,80,.97);backdrop-filter:saturate(165%) blur(20px);
+  border-bottom:1px solid rgba(172,216,213,.14);height:64px}
+.nav-links a{font-family:"Space Grotesk",sans-serif;font-weight:500;letter-spacing:.07em;font-size:10.5px}
+.nav-badge{font-family:"Space Grotesk",sans-serif;background:rgba(241,89,63,.15);
+  border:1px solid rgba(241,89,63,.42);color:var(--acc);font-weight:600}
 
-/* — Cards: softer radius, refined shadow — */
-.card,.nb-card,.route-card,.step-content,.life-card,.cost-card,.istat,.apcat{
-  border-radius:16px}
-.card{border:1px solid var(--border);box-shadow:0 1px 3px rgba(16,20,28,.04)}
-.card:hover{box-shadow:0 14px 40px rgba(19,69,80,.13);transform:translateY(-4px)}
-.card-title{font-family:"Space Grotesk",sans-serif;font-weight:600;color:var(--teal)}
-.card-desc{font-family:"Lexend Deca",sans-serif;line-height:1.78}
+/* ---------- Cards: editorial lift ---------- */
+.card,.nb-card,.route-card,.step-content,.life-card,.cost-card,.istat,.apcat,.rf-card{
+  border-radius:18px}
+.card{border:1px solid var(--border);box-shadow:0 1px 2px rgba(16,20,28,.04);transition:all .32s cubic-bezier(.22,.61,.36,1)}
+.card:hover{box-shadow:0 18px 48px rgba(19,69,80,.15);transform:translateY(-5px)}
+.card-body{padding:26px}
+.card-title{font-family:"Space Grotesk",sans-serif;font-weight:600;color:var(--teal);font-size:16px;letter-spacing:-0.01em}
+.card-desc{font-family:"Lexend Deca",sans-serif;line-height:1.8;font-size:13.5px}
+.card-img,.nb-img{transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.card:hover .card-img{transform:scale(1.05)}
+.nb-card:hover{transform:translateY(-6px);box-shadow:0 22px 56px rgba(0,0,0,.18)}
 
-/* — Chips: India pill — */
-.chip{font-family:"Space Grotesk",sans-serif;font-weight:600;letter-spacing:.13em;
-  border-radius:999px;padding:4px 11px}
+/* ---------- Chips: India pill ---------- */
+.chip{font-family:"Space Grotesk",sans-serif;font-weight:600;letter-spacing:.14em;
+  border-radius:999px;padding:5px 12px;font-size:9px}
 
-/* — Quote block: India midnight card, large glyph — */
-.quote-block{background:var(--teal);border-radius:22px;padding:48px 56px;
-  box-shadow:0 18px 50px rgba(19,69,80,.2)}
-.quote-block::after{font-family:"Crimson Pro",serif;font-size:230px;
-  color:rgba(172,216,213,.06)}
-.quote-text{font-family:"Crimson Pro",serif;font-style:italic;font-size:25px;
-  line-height:1.5;color:var(--sky)}
+/* ---------- Stat / metric cards: bold editorial numbers ---------- */
+.metric,.istat{border-radius:18px;position:relative;overflow:hidden}
+.metric{padding:30px 26px}
+.metric::after,.istat::after{content:"";position:absolute;top:-30px;right:-30px;
+  width:100px;height:100px;border-radius:50%;background:rgba(172,216,213,.08);pointer-events:none}
+.metric-val,.istat .is-val,.hstat-v{font-family:"Space Grotesk",sans-serif;
+  font-weight:700;letter-spacing:-0.03em}
+.metric-val{font-size:42px}
+.metric-label{font-family:"Space Grotesk",sans-serif;letter-spacing:.12em}
+
+/* ---------- Photos: rounded, soft shadow ---------- */
+.photo-strip,.dual-photo,.fullwidth-photo,.photo-mosaic{border-radius:18px;overflow:hidden}
+.fullwidth-photo{box-shadow:0 14px 40px rgba(19,69,80,.14)}
+.card-img,.card-img-sm{border-radius:0}
+
+/* ---------- Quote block: dramatic editorial ---------- */
+.quote-block{background:var(--teal);border-radius:24px;padding:54px 60px;
+  box-shadow:0 22px 60px rgba(19,69,80,.22);position:relative;overflow:hidden}
+.quote-block::before{content:"";position:absolute;top:-90px;right:-70px;width:260px;height:260px;
+  border-radius:50%;border:1.5px solid rgba(172,216,213,.10)}
+.quote-block::after{font-family:"Crimson Pro",serif;font-size:260px;color:rgba(172,216,213,.07)}
+.quote-text{font-family:"Crimson Pro",serif;font-style:italic;font-size:27px;
+  line-height:1.48;color:var(--sky);font-weight:500}
 .quote-body{font-family:"Lexend Deca",sans-serif}
 
-/* — Metric / stat cards: India treatment — */
-.metric{border-radius:16px}
-.metric-val,.istat .is-val,.hstat-v{font-family:"Space Grotesk",sans-serif;
-  font-weight:700;letter-spacing:-0.02em}
+/* ---------- Section titles on numeric headers ---------- */
+.metro-map-title,.infobox-title,.rf-title{font-family:"Space Grotesk",sans-serif;letter-spacing:-0.01em}
+.infobox{border-radius:20px;padding:34px 38px}
 
-/* — Section titles on dark/numeric headers — */
-.metro-map-title,.infobox-title,.rf-title{font-family:"Space Grotesk",sans-serif}
-
-/* — Footer — */
+/* ---------- Footer ---------- */
 .footer{background:var(--teal2)}
 
-/* — Reveal: keep, slightly smoother — */
-.fu{transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+/* ---------- Reveal: smoother editorial entrance ---------- */
+.fu{transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
+.fu:not(.in){transform:translateY(26px)}
+
+/* ---------- Dividers ---------- */
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0}
 </style>
 </head>
 <body>
