@@ -1338,14 +1338,14 @@ html,body{overflow-x:hidden}
 
 /* ---- LANGUAGE PHRASEBOOK: native script + romanization (India-guide elegance) ---- */
 .phrasebook{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:10px}
-.phrase{display:flex;gap:20px;align-items:center;background:#fff;border:1px solid rgba(19,69,80,.08);border-radius:18px;padding:20px 24px;box-shadow:0 3px 16px rgba(19,69,80,.05);transition:transform .3s,box-shadow .3s}
+.phrase{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;background:#fff;border:1px solid rgba(19,69,80,.08);border-radius:18px;padding:20px 22px;box-shadow:0 3px 16px rgba(19,69,80,.05);transition:transform .3s,box-shadow .3s}
 .phrase:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(19,69,80,.10)}
-.phrase-native{font-size:31px;line-height:1.15;color:var(--teal);font-weight:600;min-width:94px;max-width:94px;flex-shrink:0;text-align:center;padding-right:18px;border-right:2px solid rgba(142,203,203,.45)}
-.phrase-body{flex:1;min-width:0}
+.phrase-native{font-size:26px;line-height:1.25;color:var(--teal);font-weight:600;text-align:left;padding-right:18px;margin-right:18px;border-right:2px solid rgba(142,203,203,.45);max-width:175px}
+.phrase-body{min-width:0}
 .phrase-label{font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal3);opacity:.55;margin-bottom:6px;display:block}
 .phrase-roman{font-family:"Crimson Pro",serif;font-style:italic;font-size:22px;line-height:1.1;color:var(--acc);font-weight:600;margin-bottom:5px}
 .phrase-mean{font-size:12.5px;color:#3A5060;line-height:1.6}
-@media(max-width:760px){.phrasebook{grid-template-columns:1fr}.phrase-native{font-size:27px;min-width:72px;max-width:72px}}
+@media(max-width:760px){.phrasebook{grid-template-columns:1fr}.phrase-native{font-size:23px;max-width:140px}}
 
 /* ---- IMPACTFUL CLOSING BAND ---- */
 .closing-band{background:linear-gradient(135deg,var(--teal2) 0%,var(--teal3) 58%,#17616f 100%);border-radius:30px;padding:80px 56px;text-align:center;position:relative;overflow:hidden}
@@ -1407,7 +1407,28 @@ html,body{overflow-x:hidden}
 .g3:has(> .card:last-child:nth-child(3n+2)) > .card:nth-last-child(-n+2){grid-column:span 3}
 }
 </style>
+<style id="ikan-globefix">.session-globe{position:absolute!important;z-index:0}</style>
+<style id="ikan-spacefix">
+@media(min-width:761px){.phrasebook:has(> .phrase:last-child:nth-child(2n+1)) > .phrase:last-child{grid-column:1/-1}
+}
+/* health 3-card row: size to content, no stretched empty bottoms */
+.info3{align-items:start}
+@media(min-width:901px){
+  /* apps: pin the short phone so it tracks the tall app list (kills the stranded empty left column) */
+  .phsec{align-items:start}
+  .phsec > .ph{position:sticky;top:88px;align-self:start}
+  /* red-flags: always 3 columns (6 cards = 3+3, no empty void); a lone last card spans full width */
+  .rf-grid{grid-template-columns:repeat(3,1fr)!important}
+  .rf-grid:has(> .rf-card:last-child:nth-child(3n+1)) > .rf-card:last-child{grid-column:1/-1}
+  /* neighbourhood grid: lone last card spans full width; a 2-card last row fills */
+  .g3:has(> .nb-card:last-child:nth-child(3n+1)) > .nb-card:last-child{grid-column:1/-1}
+  .g3:has(> .nb-card:last-child:nth-child(3n+2)){grid-template-columns:repeat(6,1fr)}
+  .g3:has(> .nb-card:last-child:nth-child(3n+2)) > .nb-card{grid-column:span 2}
+  .g3:has(> .nb-card:last-child:nth-child(3n+2)) > .nb-card:nth-last-child(-n+2){grid-column:span 3}
+}
+</style>
 </head>
+
 
 
 <body>
@@ -1503,6 +1524,9 @@ html,body{overflow-x:hidden}
     <div class="life-card"><span class="life-icon">&#127891;</span><div class="life-title">Good Schools</div><div class="life-desc">ISH, Oakridge, DPS, Hyderabad Public School — strong CBSE and international school ecosystem</div></div>
     <div class="life-card"><span class="life-icon">&#127967;</span><div class="life-title">Cinema &amp; Culture</div><div class="life-desc">Ramoji Film City (world's largest studio), Salar Jung Museum, Hyderabad Literary Festival</div></div>
     <div class="life-card"><span class="life-icon">&#129309;</span><div class="life-title">Welcoming Culture</div><div class="life-desc">Hyderabadis are renowned for warmth — a true cultural melting pot, one of India's most welcoming cities</div></div>
+    <div class="life-card"><span class="life-icon">&#128138;</span><div class="life-title">Pharma &amp; Life Sciences</div><div class="life-desc">Genome Valley and Hyderabad Pharma City — the city makes a third of the world's vaccine doses, anchoring a vast life-sciences job market</div></div>
+    <div class="life-card"><span class="life-icon">&#127916;</span><div class="life-title">Tollywood Capital</div><div class="life-desc">Home of the Telugu film industry — Ramoji Film City, Annapurna Studios, and a thriving media and creative-jobs ecosystem</div></div>
+    <div class="life-card"><span class="life-icon">&#128737;&#65039;</span><div class="life-title">Among India's Safest</div><div class="life-desc">Consistently ranked one of India's safest metros, with She Teams policing — comfortable for families and women professionals</div></div>
   </div>
 
 <div class="fu" style="margin:28px 0;background:linear-gradient(135deg,var(--teal2) 0%,#0d3d4a 100%);border-radius:14px;padding:24px 28px;color:#fff">
@@ -1578,42 +1602,42 @@ html,body{overflow-x:hidden}
       <div class="nb-head"><div class="nb-num">1</div><div><div class="nb-name">Banjara Hills</div><div class="nb-vibe">The Most Prestigious Address</div></div></div>
       <div class="nb-body"><div class="nb-desc">Hyderabad's finest residential and social address. The city's best fine-dining restaurants, star hotels (ITC Kakatiya, The Park), premium retail and shopping, and top hospitals are all within easy reach. Home to senior executives, diplomats, and MNC country heads. Roads 10, 12, and 36 are the addresses to target.</div>
       <div class="nb-tags"><span class="nb-tag">Fine Dining</span><span class="nb-tag">Star Hotels</span><span class="nb-tag">Shopping Hotspot</span><span class="nb-tag">Hospitals Nearby</span></div>
-      <div class="nb-best">Best for: Senior Executives &amp; Country Heads</div></div>
+      <div class="nb-best">Senior Executives &amp; Country Heads</div></div>
     </div>
     <div class="nb-card nb2">
       <img id="img_nb2" class="nb-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/A_bird%27s_view_of_KBR_Park_entrance.jpg/1280px-A_bird%27s_view_of_KBR_Park_entrance.jpg" alt="KBR National Park greenery beside Jubilee Hills Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20bird%27s%20view%20of%20KBR%20Park%20entrance.jpg'">
       <div class="nb-head"><div class="nb-num">2</div><div><div class="nb-name">Jubilee Hills</div><div class="nb-vibe">Family Heartland</div></div></div>
       <div class="nb-body"><div class="nb-desc">Hyderabad's most popular neighbourhood for families. Excellent international school proximity (ISH, Oakridge), multiple premium hospitals within 15 minutes, strong community, and premium apartments alongside a limited selection of villas. IKAN places most Hyderabad families here.</div>
       <div class="nb-tags"><span class="nb-tag">Int'l Schools</span><span class="nb-tag">Expat Community</span><span class="nb-tag">Premium Villas</span><span class="nb-tag">Hospitals Nearby</span></div>
-      <div class="nb-best">Best for: Families with School-Age Children</div></div>
+      <div class="nb-best">Families with School-Age Children</div></div>
     </div>
     <div class="nb-card nb3">
       <img id="img_nb3" class="nb-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Gachibowli_IT_%26_Financial_District_Skyline_View%2C_Dec_2018.jpg/1280px-Gachibowli_IT_%26_Financial_District_Skyline_View%2C_Dec_2018.jpg" alt="Gachibowli IT and Financial District skyline near ISB Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Gachibowli%20IT%20%26%20Financial%20District%20Skyline%20View%2C%20Dec%202018.jpg'">
       <div class="nb-head"><div class="nb-num">3</div><div><div class="nb-name">Gachibowli</div><div class="nb-vibe">Tech Hub — Zero Commute</div></div></div>
       <div class="nb-body"><div class="nb-desc">Zero-commute living for tech and finance professionals. Walk to Microsoft India HQ, Wipro, Cyient, DXC Technology, Goldman Sachs campuses. New apartment towers, growing café scene, University of Hyderabad green belt, and Durgam Cheruvu lake for recreation.</div>
       <div class="nb-tags"><span class="nb-tag">Zero Commute</span><span class="nb-tag">MNC Campuses</span><span class="nb-tag">Durgam Cheruvu</span><span class="nb-tag">Modern Towers</span></div>
-      <div class="nb-best">Best for: Tech &amp; Finance Professionals</div></div>
+      <div class="nb-best">Tech &amp; Finance Professionals</div></div>
     </div>
     <div class="nb-card nb4">
       <img id="img_nb4" class="nb-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Orbit_by_Auro_Realty%2C_Hitech_City.jpg/1280px-Orbit_by_Auro_Realty%2C_Hitech_City.jpg" alt="Modern office tower in HITEC City Madhapur Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Orbit%20by%20Auro%20Realty%2C%20Hitech%20City.jpg'">
       <div class="nb-head"><div class="nb-num">4</div><div><div class="nb-name">Madhapur &amp; HITEC City</div><div class="nb-vibe">The Tech Core</div></div></div>
       <div class="nb-body"><div class="nb-desc">HITEC City and Madhapur are two distinct, adjoining areas at the heart of Hyderabad's tech corridor. HITEC City is the corporate core — Cyber Towers and the Microsoft–Amazon–Google campus strip. Madhapur is the high-energy residential pocket favoured by young professionals and single techies (largely an Indian-preferred location), with the best restaurants and bars in the city, strong metro connectivity, and Inorbit Mall. Neighbouring Raidurgam is the newer, premium pocket most preferred by expats.</div>
       <div class="nb-tags"><span class="nb-tag">HITEC City</span><span class="nb-tag">Metro Connected</span><span class="nb-tag">Restaurants &amp; Bars</span><span class="nb-tag">Convenience</span></div>
-      <div class="nb-best">Best for: HITEC City Workers &amp; Young Professionals</div></div>
+      <div class="nb-best">HITEC City Workers &amp; Young Professionals</div></div>
     </div>
     <div class="nb-card nb5">
       <img id="img_nb5" class="nb-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Sarath_City_Capital_Mall_%2813776%29.jpg/1280px-Sarath_City_Capital_Mall_%2813776%29.jpg" alt="Sarath City Capital Mall Kondapur Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Sarath%20City%20Capital%20Mall%20%2813776%29.jpg'">
       <div class="nb-head"><div class="nb-num">5</div><div><div class="nb-name">Kondapur &amp; Manikonda</div><div class="nb-vibe">Best Value — IT Access</div></div></div>
       <div class="nb-body"><div class="nb-desc">The affordable alternative to HITEC City and Gachibowli — still within 10–15 minutes of all major campuses but rents 25–35% lower. Manikonda in particular is a purely value-housing pocket. Large gated communities with full amenities, strong school proximity. Excellent for families on tighter housing budgets.</div>
       <div class="nb-tags"><span class="nb-tag">Best Value</span><span class="nb-tag">Gated Complexes</span><span class="nb-tag">IT Access</span><span class="nb-tag">Family-Friendly</span></div>
-      <div class="nb-best">Best for: Budget-Conscious Families</div></div>
+      <div class="nb-best">Budget-Conscious Families</div></div>
     </div>
     <div class="nb-card nb6">
       <img id="img_nb6" class="nb-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Kokapet_Financial_District_Skyline_%E2%80%93_View_from_Neopolis.jpg/1280px-Kokapet_Financial_District_Skyline_%E2%80%93_View_from_Neopolis.jpg" alt="Financial District skyline at Kokapet Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Kokapet%20Financial%20District%20Skyline%20%E2%80%93%20View%20from%20Neopolis.jpg'">
       <div class="nb-head"><div class="nb-num">6</div><div><div class="nb-name">Financial District</div><div class="nb-vibe">Premium Corporate Quarter</div></div></div>
       <div class="nb-body"><div class="nb-desc">Hyderabad's newest and most planned residential quarter — adjacent to Deloitte, HSBC, Bank of America, and NASSCOM campuses. Ultra-modern premium gated villas and apartments, wide clean roads, and the best corporate township living in Telangana.</div>
       <div class="nb-tags"><span class="nb-tag">New Construction</span><span class="nb-tag">Premium Villas</span><span class="nb-tag">Finance Belt</span><span class="nb-tag">Clean Wide Roads</span></div>
-      <div class="nb-best">Best for: Finance Sector Professionals</div></div>
+      <div class="nb-best">Finance Sector Professionals</div></div>
     </div>
   </div>
   <div class="tip fu"><div class="tip-icon">&#128161;</div><div class="tip-text"><strong>IKAN Tip:</strong> Always shortlist your preferred school first, then choose the neighbourhood with the shortest school commute. Jubilee Hills and Kondapur both offer excellent school access. Our team arranges viewings within 48 hours of your arrival in Hyderabad.</div></div>
@@ -1655,11 +1679,11 @@ html,body{overflow-x:hidden}
   <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--teal);margin:24px 0 16px" class="fu">Rental Market Practices</h3>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" class="fu">
     <div class="rent-pair"><div class="rent-label">🔐 Security Deposit</div><div class="rent-val">3 months rent is standard (refundable). Paid at lease signing.</div></div>
-    <div class="rent-pair"><div class="rent-label" style="font-weight:700;color:var(--teal)">Tax Withholding Compliance</div><div class="rent-val">As a tenant, you may be required to withhold tax at source (TDS) from the monthly rent and deposit it with the government — this applies when monthly rent exceeds ₹50,000. Consult a tax professional to understand your obligations before signing your lease.</div></div>
-    <div class="rent-pair"><div class="rent-label">Lease Duration</div><div class="rent-val">11-month Lease is standard market practice, renewable with 5–10% rent escalation.</div></div>
+    <div class="rent-pair"><div class="rent-label">🧾 Tax Withholding Compliance</div><div class="rent-val">As a tenant, you may be required to withhold tax at source (TDS) from the monthly rent and deposit it with the government — this applies when monthly rent exceeds ₹50,000. Consult a tax professional to understand your obligations before signing your lease.</div></div>
+    <div class="rent-pair"><div class="rent-label">📅 Lease Duration</div><div class="rent-val">11-month Lease is standard market practice, renewable with 5–10% rent escalation.</div></div>
     <div class="rent-pair"><div class="rent-label">📋 Documentation</div><div class="rent-val">Aadhaar, PAN. IKAN helps negotiate and prepare your Lease.</div></div>
     <div class="rent-pair"><div class="rent-label">🛋️ Furnishing</div><div class="rent-val">Most premium apartments are semi-furnished (wardrobes, AC, kitchen, appliances). Fully furnished options are rare and come at a premium.</div></div>
-    <div class="rent-pair"><div class="rent-label">🤝 Brokerage</div><div class="rent-val">Typically 1 month's rent. Use IKAN's preferred broker network to avoid inflated rates.IKAN manages all compliance automatically.</div></div>
+    <div class="rent-pair"><div class="rent-label">🤝 Brokerage</div><div class="rent-val">Typically 1 month's rent. Use IKAN's preferred broker network to avoid inflated rates. IKAN manages all compliance automatically.</div></div>
   </div>
 </section>
 <div class="divider"></div>
@@ -1782,13 +1806,13 @@ html,body{overflow-x:hidden}
     </div>
     <div class="card">
       <div class="card-body">
-        <div class="chip chip-gold">Weekend Escapes</div>
-        <div class="card-title">Travel from Hyderabad</div>
+        <div class="chip chip-gold">Nightlife &amp; Shopping</div>
+        <div class="card-title">After Dark &amp; Retail Therapy</div>
         <div class="card-desc">
-          <strong>Ananthagiri Hills (100 km):</strong> Cool forested hills near Vikarabad — trekking, coffee, and the source of the Musi river.<br><br>
-          <strong>Srisailam (180 km):</strong> Ancient Mallikarjuna Jyotirlinga temple, a major dam on the Krishna, and the Nallamala tiger reserve.<br><br>
-          <strong>Nagarjuna Sagar (180 km):</strong> A major masonry dam on the Krishna River — a multipurpose irrigation and hydroelectric project, with a scenic reservoir and Buddhist heritage island.<br><br>
-          <strong>Chirala Beach (270 km):</strong> A quiet stretch of Bay of Bengal coastline — casuarina groves and uncrowded sands.
+          <strong>Nightlife:</strong> Jubilee Hills and Gachibowli anchor the scene — Air Live, Prost Brewpub, and Hard Rock Café for late evenings; most bars wind down by 11:30pm.<br><br>
+          <strong>Malls:</strong> Inorbit (Madhapur), Sarath City Capital (Kondapur, India's largest), and GVK One (Banjara Hills) for premium retail.<br><br>
+          <strong>Pearls &amp; Bangles:</strong> Laad Bazaar near Charminar — Hyderabad's legendary pearl and lac-bangle market, 30–40% below retail.<br><br>
+          <strong>Local Markets:</strong> Shilparamam crafts village (Madhapur) and Sunday Begum Bazaar for everything wholesale.
         </div>
       </div>
     </div>
@@ -1870,7 +1894,7 @@ html,body{overflow-x:hidden}
 
   <div class="fu" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
     <div style="background:#fff;border-radius:12px;padding:18px;border:1px solid var(--border)">
-      <div style="font-weight:700;font-size:13px;color:var(--teal);margin-bottom:10px">📖 Basic Telugu — For daily interactions — your building s..</div>
+      <div style="font-weight:700;font-size:13px;color:var(--teal);margin-bottom:10px">📖 Basic Telugu — Everyday Essentials</div>
       <div style="display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:12px;color:#444;align-items:baseline">
         <strong>Namaskaram</strong><span>Hello / Good day</span>
         <strong>Dhanyavadalu</strong><span>Thank you</span>
@@ -1899,7 +1923,7 @@ html,body{overflow-x:hidden}
       <div><strong style="display:block;margin-bottom:4px;color:var(--teal)">⏰ Hyderabadi Time</strong>Social events start 30–45 min late. Corporate Hyderabad is punctual; social Hyderabad runs its own clock. A dinner "at 8pm" means 8:45pm is fine.</div>
       <div><strong style="display:block;margin-bottom:4px;color:var(--teal)">🌞 Lunch at 3pm</strong>Traditional households eat the main meal at 2:30–3:30pm. Sunday lunch invites saying "come at 3" are not typos. Don't eat before arriving.</div>
       <div><strong style="display:block;margin-bottom:4px;color:var(--teal)">☕ Irani Café Culture</strong>Real bonding over chai, not coffee. "Chai lenge?" means 90 minutes minimum. Irani cafés close by 9–10pm — Nimrah Café near Charminar is the pilgrimage.</div>
-      <div><strong style="display:block;margin-bottom:4px;color:var(--teal)">🛒 Rythu Bazaar Secret</strong>Government farmer-direct markets. 50–80% cheaper. Go before 11am, bring bags. Mobile Rythu: 7330733212. your own bags. Western corridor: Mehdipatnam Rythu Bazaar (largest) or Kukatpally.</div>
+      <div><strong style="display:block;margin-bottom:4px;color:var(--teal)">🛒 Rythu Bazaar Secret</strong>Government farmer-direct markets. 50–80% cheaper. Go before 11am, bring your own bags. Mobile Rythu helpline: 7330733212. Western corridor: Mehdipatnam Rythu Bazaar (largest) or Kukatpally.</div>
       <div><strong style="display:block;margin-bottom:4px;color:var(--teal)">💧 Water Rule</strong>Never drink tap water directly. Always ask landlords: "HMWSSB or borewell supply? Building RO system?" Add individual under-sink filter as backup.</div>
       <div><strong style="display:block;margin-bottom:4px;color:var(--teal)">🌙 Old City at Night</strong>Completely different world. Ramadan transforms it — food stalls, lights, crowds until 3am. Visit once: it's essential. Take Uber, never drive yourself in the narrow lanes.</div>
     </div>
@@ -1936,7 +1960,7 @@ html,body{overflow-x:hidden}
       <div class="card-body" style="padding:22px">
         <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
           <span class="chip chip-green">1 hr · Flight</span>
-          <span class="chip chip-sky">Nov – Feb peak</span>
+          <span class="chip chip-sky">Nov – Feb best</span>
         </div>
         <div class="card-title" style="font-size:18px">Goa</div>
         <div class="card-desc">The most popular weekend destination for Hyderabad's working professionals. Fly into Dabolim or Mopa airport (₹2,500–5,000 return, book Monday for the same weekend to get best rates). South Goa (Palolem, Agonda, Cabo de Rama) is calmer and suited to families and couples. North Goa (Baga, Calangute, Anjuna) is livelier with beach clubs and nightlife.</div>
@@ -1956,7 +1980,7 @@ html,body{overflow-x:hidden}
       <div class="card-body" style="padding:22px">
         <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
           <span class="chip chip-green">1.5 hrs · Flight + Drive</span>
-          <span class="chip chip-sky">Apr – Jun best escape</span>
+          <span class="chip chip-sky">Apr – Jun best</span>
         </div>
         <div class="card-title" style="font-size:18px">Munnar &amp; Ooty</div>
         <div class="card-desc">Fly to Kochi, then 3.5 hrs by road to Munnar (1,600m altitude, 10°C cooler than Hyderabad). Essential in April–June when the plains bake. Munnar's tea estates carpet the hills in every shade of green. Ooty (Nilgiris, Tamil Nadu) is accessible via Coimbatore airport — take the Nilgiri Mountain Railway, a UNESCO heritage toy train.</div>
@@ -2124,7 +2148,7 @@ html,body{overflow-x:hidden}
   <div class="scs fu">
     <div class="sc2" style="background:linear-gradient(135deg,#0D4F5C,#1A6B7C)">
       <div class="bigt">&#10052;&#65039;</div><div class="scnm">❄️ Winter</div>
-      <span class="scmo">November — February · ARRIVE IN THIS WINDOW</span>
+      <span class="scmo">November – February · ARRIVE IN THIS WINDOW</span>
       <div class="scdesc">Outstanding and genuinely cool — clear skies, cool evenings (14–17°C), warm comfortable days (22–26°C). The city's heritage sites, outdoor restaurants, and KBR Park are at their most enjoyable. <strong>Arrive in October or November</strong> to settle in during Hyderabad's finest season.</div>
       <div class="sctips"><div class="sctip">Light jacket for evenings below 18°C</div><div class="sctip">Bonalu, Diwali, Hyderabad Literary Festival season</div><div class="sctip">Outdoor dining season at its peak</div></div>
     </div>
@@ -2136,7 +2160,7 @@ html,body{overflow-x:hidden}
     </div>
     <div class="sc2" style="background:linear-gradient(135deg,#1565C0,#0d3b8a)">
       <div class="bigt">&#127783;&#65039;</div><div class="scnm">🌧️ Monsoon</div>
-      <span class="scmo">July — October · LAKES FILL, CITY GREENS</span>
+      <span class="scmo">July – October · LAKES FILL, CITY GREENS</span>
       <div class="scdesc">Hyderabad's monsoon fills Hussain Sagar and the city's lakes beautifully. The city turns emerald green and temperatures drop to a comfortable 27–31°C. Urban flooding is occasionally an issue — check your building's flood history before signing a lease.</div>
       <div class="sctips"><div class="sctip">Check flood history of building before renting</div><div class="sctip">Afternoon thunderstorms are sudden — carry umbrella</div><div class="sctip">Hussain Sagar at full capacity is spectacular</div></div>
     </div>
@@ -2150,8 +2174,9 @@ html,body{overflow-x:hidden}
     <div class="rf-card"><span class="rf-icon">&#128663;</span><div class="rf-title">Traffic Worse Than It Looks on Maps</div><div class="rf-body">HITEC City internal roads and Jubilee Hills junctions congest significantly at peak hours. A 10km journey can take 45 minutes at 9am. <strong>Always conduct a trial commute before signing your lease.</strong> The western corridor is the most congested zone — factor this in carefully.</div></div>
     <div class="rf-card"><span class="rf-icon">&#127811;</span><div class="rf-title">Summer Heat Requires Full AC Infrastructure</div><div class="rf-body">April–June temperatures reach 38–40°C. <strong>Always verify your apartment has full AC in every room, DG power backup for the AC, and no water shortage history in the hot months</strong> before signing. This is the most common issue reported by newly arrived professionals who signed leases in cooler months.</div></div>
     <div class="rf-card"><span class="rf-icon">&#127986;&#65039;</span><div class="rf-title">Old City Navigation Is a Different World</div><div class="rf-body">The Charminar and Old City area has extremely narrow, congested roads. <strong>Never attempt to drive to Old City — always take an Ola/Uber and walk the final 500m.</strong> Visit on a weekday morning for the best experience. Friday afternoons are extremely congested.</div></div>
-    <div class="rf-card"><span class="rf-icon">&#128167;</span><div class="rf-title">🌧️ Monsoon Flooding in Low-Lying Areas</div><div class="rf-body">Himayatnagar, Falaknuma, and parts of Kukatpally flood during August–September monsoon peaks. <strong>Check the specific building's flood history</strong> — not just the neighbourhood — before signing any lease.</div></div>
+    <div class="rf-card"><span class="rf-icon">&#128167;</span><div class="rf-title">Monsoon Flooding in Low-Lying Areas</div><div class="rf-body">Himayatnagar, Falaknuma, and parts of Kukatpally flood during August–September monsoon peaks. <strong>Check the specific building's flood history</strong> — not just the neighbourhood — before signing any lease.</div></div>
     <div class="rf-card"><span class="rf-icon">&#128246;</span><div class="rf-title">Telugu Language Outside Expat Zones</div><div class="rf-body">Daily life outside HITEC City and Jubilee Hills operates primarily in Telugu or Urdu. English is widely spoken in the tech corridor but less so elsewhere. <strong>Learning basic Telugu greetings</strong> is warmly received and genuinely helpful.</div></div>
+    <div class="rf-card"><span class="rf-icon">&#128167;</span><div class="rf-title">Water Supply Is Not Guaranteed</div><div class="rf-body">Many western-corridor buildings on the city outskirts rely on borewells and tanker water, not piped HMWSSB supply, which can run dry in peak summer. <strong>Ask whether the building has HMWSSB connection, borewell yield, and assured tanker backup</strong> before you commit.</div></div>
   </div>
   <div style="margin-top:32px;background:rgba(232,71,47,.08);border:1px solid rgba(232,71,47,.2);border-radius:14px;padding:24px 28px" class="fu">
     <div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ff8878;margin-bottom:10px">&#128161; IKAN's Honest Assessment</div>
@@ -2193,7 +2218,7 @@ html,body{overflow-x:hidden}
         </div>
         <div class="phcat"><div class="phcl">Health &amp; Home</div>
           <div class="phag">
-            <div class="pai" style="background:#E53935"><span class="em">&#128138;</span><div class="nm">PharmEsy</div></div>
+            <div class="pai" style="background:#E53935"><span class="em">&#128138;</span><div class="nm">PharmEasy</div></div>
             <div class="pai" style="background:#1976D2"><span class="em">&#127973;&#65039;</span><div class="nm">Practo</div></div>
             <div class="pai" style="background:#FF5722"><span class="em">&#128295;</span><div class="nm">UrbanCo</div></div>
             <div class="pai" style="background:#2e7d52"><span class="em">&#128170;</span><div class="nm">Cult.fit</div></div>
@@ -2212,7 +2237,7 @@ html,body{overflow-x:hidden}
       <div class="apcat"><div class="apct">Food &amp; Grocery Delivery</div>
         <div class="aprows">
           <div class="aprow"><div class="ai" style="background:#FBE9E7">&#127828;</div><div><span class="an">Swiggy &amp; Zomato</span><span class="ad">Both work well across Hyderabad. Swiggy Instamart for 10-minute grocery delivery in HITEC City, Gachibowli, Kondapur, and Jubilee Hills. Zomato better for restaurant discovery and table reservations.</span></div></div>
-          <div class="aprow"><div class="ai" style="background:#FFC72C" style="background:#FFF8E1">&#9889;</div><div><span class="an">Blinkit &amp; Zepto — 10-Minute Delivery</span><span class="ad">Both work excellently across Hyderabad's western expat corridor. Best for daily essentials, dairy, and packaged goods. Set your home address on arrival day.</span></div></div>
+          <div class="aprow"><div class="ai" style="background:#FFF8E1">&#9889;</div><div><span class="an">Blinkit &amp; Zepto — 10-Minute Delivery</span><span class="ad">Both work excellently across Hyderabad's western expat corridor. Best for daily essentials, dairy, and packaged goods. Set your home address on arrival day.</span></div></div>
           <div class="aprow"><div class="ai" style="background:#F1F8E9">&#128722;</div><div><span class="an">BigBasket</span><span class="ad">Best for weekly grocery planning. Good international import section. Schedule next-day delivery slots. Best Hyderabad option for specialty imported food items.</span></div></div>
         </div>
       </div>
@@ -2220,6 +2245,7 @@ html,body{overflow-x:hidden}
         <div class="aprows">
           <div class="aprow"><div class="ai" style="background:#EDE7F6">&#128179;</div><div><span class="an">PhonePe / GPay — UPI</span><span class="ad">UPI is widely used in Hyderabad — from Paradise biryani to auto-rickshaws. Set up as soon as your bank account is active. Zero transaction fees, instant transfers.</span></div></div>
           <div class="aprow"><div class="ai" style="background:#E0F2F1">&#128260;</div><div><span class="an">Wise / Remitly (Expats)</span><span class="ad">For international salary transfers and sending money home. Dramatically better rates than bank wire transfers. Set up before arrival.</span></div></div>
+          <div class="aprow"><div class="ai" style="background:#F3E5F5">&#128179;</div><div><span class="an">CRED &amp; TSSPDCL Bills</span><span class="ad">CRED for one-tap credit-card bill payments. Use the TSSPDCL app or PhonePe for your Telangana electricity bill, and the HMWSSB app for water — all on auto-pay once your connection is in your name.</span></div></div>
         </div>
       </div>
       <div class="apcat"><div class="apct">Health &amp; Home Services</div>
@@ -2282,10 +2308,10 @@ html,body{overflow-x:hidden}
       <div class="steps">
         <div class="step"><div class="step-num">1</div><div class="step-content"><div class="step-title">Aadhaar Address Update</div><div class="step-desc">Update your Aadhaar to your new Hyderabad address within the first month via the UIDAI portal (uidai.gov.in). Required for bank updates, school admissions, vehicle registration transfer, and voter ID change.</div></div></div>
         <div class="step"><div class="step-num">2</div><div class="step-content"><div class="step-title">Bank Account &amp; UPI Update</div><div class="step-desc">Update address in existing bank accounts. Open a local branch account if needed (HDFC, HSBC, SBI are widely available). Set up PhonePe or GPay linked to your bank immediately — UPI is widely used across Hyderabad.</div></div></div>
-        <div class="step"><div class="step-num">5</div><div class="step-content"><div class="step-title">Arrange Permanent Transport</div><div class="step-desc">Set up your primary commute solution — regular Ola/Uber or hire a dedicated driver (₹15,000–22,000/month).If you have a vehicle, note that Telangana registration transfer is required after 12 months.</div></div></div>
-        <div class="step"><div class="step-num">4</div><div class="step-content"><div class="step-title">LPG Gas Connection Transfer</div><div class="step-desc">Transfer your Indane/HP/Bharat Gas connection to your Hyderabad address. Apply at the nearest distributor with Aadhaar and rental agreement. Ask if your building has piped gas (PNG) — faster and cheaper.</div></div></div>
-        
-        <div class="step"><div class="step-num">6</div><div class="step-content"><div class="step-title">Voter ID &amp; Driving Licence</div><div class="step-desc">Transfer voter ID via voterportal.eci.gov.in. Update driving licence address via Sarathi portal. Your existing licence is valid across India — only the address update is needed.</div></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-content"><div class="step-title">LPG Gas Connection Transfer</div><div class="step-desc">Transfer your Indane/HP/Bharat Gas connection to your Hyderabad address. Apply at the nearest distributor with Aadhaar and rental agreement. Ask if your building has piped gas (PNG) — faster and cheaper.</div></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-content"><div class="step-title">Arrange Permanent Transport</div><div class="step-desc">Set up your primary commute solution — regular Ola/Uber or hire a dedicated driver (₹15,000–22,000/month). If you have a vehicle, note that Telangana registration transfer is required after 12 months.</div></div></div>
+
+        <div class="step"><div class="step-num">5</div><div class="step-content"><div class="step-title">Voter ID &amp; Driving Licence</div><div class="step-desc">Transfer voter ID via voterportal.eci.gov.in. Update driving licence address via Sarathi portal. Your existing licence is valid across India — only the address update is needed.</div></div></div>
       </div>
     </div>
   </div>
@@ -2343,7 +2369,7 @@ html,body{overflow-x:hidden}
     </tbody></table></div>
     <div>
       <div class="emb"><div class="emb-title">IKAN Support</div><div class="emb-body">Your IKAN consultant is available throughout your settling-in period. Contact your assigned consultant directly for support.</div></div>
-      <div class="emb"><div class="emb-title">FRRO Hyderabad (Expats)</div></div>
+      <div class="emb"><div class="emb-title">FRRO Hyderabad (Expats)</div><div class="emb-body">Foreigners on long-term visas register and extend online via the e-FRRO portal (indianfrro.gov.in). Office: Bureau of Immigration, Bowenpally, Secunderabad. Complete registration within 14 days of arrival where required.</div></div>
       <div class="emb"><div class="emb-title">Mental Health Resources</div><div class="emb-body">Vandrevala Foundation: 1860-2662-345 (24/7) · iCall: 9152987821 · NIMHANS Tele: 080-4611-0007. These resources are available and confidential.</div></div>
     </div>
   </div>
