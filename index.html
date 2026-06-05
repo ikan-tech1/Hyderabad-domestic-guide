@@ -1420,6 +1420,10 @@ html,body{overflow-x:hidden}
   /* red-flags: always 3 columns (6 cards = 3+3, no empty void); a lone last card spans full width */
   .rf-grid{grid-template-columns:repeat(3,1fr)!important}
   .rf-grid:has(> .rf-card:last-child:nth-child(3n+1)) > .rf-card:last-child{grid-column:1/-1}
+  .rf-grid:has(> .rf-card:last-child:nth-child(3n+2)){grid-template-columns:repeat(6,1fr)!important}
+  .rf-grid:has(> .rf-card:last-child:nth-child(3n+2)) > .rf-card{grid-column:span 2}
+  .rf-grid:has(> .rf-card:last-child:nth-child(3n+2)) > .rf-card:nth-last-child(-n+2){grid-column:span 3}
+
   /* neighbourhood grid: lone last card spans full width; a 2-card last row fills */
   .g3:has(> .nb-card:last-child:nth-child(3n+1)) > .nb-card:last-child{grid-column:1/-1}
   .g3:has(> .nb-card:last-child:nth-child(3n+2)){grid-template-columns:repeat(6,1fr)}
@@ -1427,6 +1431,8 @@ html,body{overflow-x:hidden}
   .g3:has(> .nb-card:last-child:nth-child(3n+2)) > .nb-card:nth-last-child(-n+2){grid-column:span 3}
 }
 </style>
+<style id="ikan-costfix">@media(min-width:901px){.cost-grid:has(> .cost-card:nth-child(6):last-child){grid-template-columns:repeat(6,1fr)!important}.cost-grid:has(> .cost-card:nth-child(5):last-child){grid-template-columns:repeat(5,1fr)!important}.cost-grid:has(> .cost-card:nth-child(4):last-child){grid-template-columns:repeat(4,1fr)!important}}</style>
+<style id="ikan-lifefix">@media(min-width:901px){.life-grid:has(> .life-card:last-child:nth-child(4n+2)) > .life-card:nth-last-child(-n+2){grid-column:span 2}}</style>
 </head>
 
 
