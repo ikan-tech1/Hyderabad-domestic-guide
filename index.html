@@ -1395,7 +1395,20 @@ html,body{overflow-x:hidden}
 .g2{align-items:start}
 .chip{font-size:9px!important;letter-spacing:1.2px!important;padding:5px 11px!important;border-radius:7px!important}
 </style>
+<style id="ikan-rowfill">
+@media(min-width:901px){
+/* partial last rows fill the full width — no empty cells (desktop only) */
+.g4:has(> .card:last-child:nth-child(4n+2)) > .card:nth-last-child(-n+2){grid-column:span 2}
+.g4:has(> .card:last-child:nth-child(4n+3)){grid-template-columns:repeat(12,1fr)}
+.g4:has(> .card:last-child:nth-child(4n+3)) > .card{grid-column:span 3}
+.g4:has(> .card:last-child:nth-child(4n+3)) > .card:nth-last-child(-n+3){grid-column:span 4}
+.g3:has(> .card:last-child:nth-child(3n+2)){grid-template-columns:repeat(6,1fr)}
+.g3:has(> .card:last-child:nth-child(3n+2)) > .card{grid-column:span 2}
+.g3:has(> .card:last-child:nth-child(3n+2)) > .card:nth-last-child(-n+2){grid-column:span 3}
+}
+</style>
 </head>
+
 
 <body>
 
