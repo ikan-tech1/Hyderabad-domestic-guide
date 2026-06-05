@@ -40,7 +40,7 @@ body{font-family:"Lexend Deca",sans-serif;background:var(--cream);color:var(--da
 .nav-mobile a{display:block;color:rgba(142,203,203,.75);text-decoration:none;font-size:12px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;padding:11px 0;border-bottom:1px solid rgba(142,203,203,.07)}
 .hero{min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding-top:60px}
 .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 40%}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,46,56,.97) 0%,rgba(8,46,56,.76) 38%,rgba(8,46,56,.32) 65%,rgba(8,46,56,.08) 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,46,56,.98) 0%,rgba(8,46,56,.9) 35%,rgba(8,46,56,.62) 58%,rgba(8,46,56,.18) 100%)}
 .hero-overlay2{position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(13,79,92,.55) 0%,transparent 70%)}
 .hero-pattern{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238ECBCB' fill-opacity='0.03'%3E%3Crect x='19' y='0' width='2' height='8'/%3E%3Crect x='19' y='32' width='2' height='8'/%3E%3Crect x='0' y='19' width='8' height='2'/%3E%3Crect x='32' y='19' width='8' height='2'/%3E%3Crect x='18' y='18' width='4' height='4'/%3E%3C/g%3E%3C/svg%3E")}
 .hero-content{position:relative;z-index:2;padding:64px 80px 80px;max-width:900px}
@@ -49,9 +49,9 @@ body{font-family:"Lexend Deca",sans-serif;background:var(--cream);color:var(--da
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
 .hero-eyebrow-text{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--sky)}
 .hero-title{font-family:"Crimson Pro",serif;font-size:clamp(64px,9vw,116px);font-weight:700;color:#fff;line-height:.88;letter-spacing:-3px;margin-bottom:4px}
-.hero-ghost{display:block;color:transparent;-webkit-text-stroke:1px rgba(142,203,203,.28);letter-spacing:-2px;font-family:"Crimson Pro",serif;font-size:clamp(36px,5vw,70px);font-weight:400;font-style:italic;line-height:1.2;margin-bottom:4px}
+.hero-ghost{display:block;color:rgba(142,203,203,.95);letter-spacing:-2px;font-family:"Crimson Pro",serif;font-size:clamp(36px,5vw,70px);font-weight:400;font-style:italic;line-height:1.2;margin-bottom:4px;text-shadow:0 2px 16px rgba(0,0,0,.45)}
 .hero-bar{width:60px;height:3px;background:var(--acc);border-radius:2px;margin:20px 0 16px}
-.hero-subtitle{font-size:17px;font-weight:300;color:rgba(142,203,203,.82);line-height:1.7;max-width:560px;font-style:italic;margin-bottom:36px}
+.hero-subtitle{font-size:17px;font-weight:400;color:#eef7f6;line-height:1.7;max-width:560px;font-style:italic;margin-bottom:36px;text-shadow:0 1px 16px rgba(8,46,56,.85),0 1px 3px rgba(8,46,56,.6)}
 .hero-stats{display:flex;gap:32px;flex-wrap:wrap;margin-bottom:32px}
 .hstat{border-left:2px solid rgba(142,203,203,.22);padding-left:16px}
 .hstat-v{font-family:"Crimson Pro",serif;font-size:26px;font-weight:700;color:#fff;line-height:1}
@@ -259,7 +259,7 @@ body{font-family:"Lexend Deca",sans-serif;background:var(--cream);color:var(--da
 .callout-band-text{font-family:"Crimson Pro",serif;font-size:28px;font-style:italic;color:#fff;line-height:1.4}
 .callout-band-btn{background:#fff;color:var(--acc);padding:13px 30px;border-radius:8px;font-size:12px;font-weight:700;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap}
 .footer{background:var(--teal2);padding:56px 80px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;align-items:start;border-top:1px solid rgba(255,255,255,.05)}
-.f-logo img{height:32px;width:auto;display:block;margin-bottom:8px}
+.f-logo img,.f-logo svg{height:36px;width:auto;display:block;margin-bottom:8px}
 .f-tagline{font-size:13px;font-weight:300;color:rgba(142,203,203,.45);font-style:italic}
 .f-link{color:rgba(142,203,203,.75);text-decoration:none;font-size:13px}.f-link:hover{color:#fff}
 .f-muted{font-size:10px;color:rgba(142,203,203,.25);margin-top:5px;letter-spacing:.5px}
@@ -267,7 +267,6 @@ body{font-family:"Lexend Deca",sans-serif;background:var(--cream);color:var(--da
 @media(max-width:900px){.sec{padding:56px 32px}.rf-section{padding:56px 32px}.g2,.g3,.g4{grid-template-columns:1fr}.cost-grid{grid-template-columns:repeat(3,1fr)}.hero-content{padding:40px 32px 60px}.photo-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:auto}.mosaic-tall{grid-row:auto}.footer{grid-template-columns:1fr;padding:40px 32px}.life-grid{grid-template-columns:repeat(2,1fr)}.callout-band{grid-template-columns:1fr;padding:32px}.metric-row{grid-template-columns:repeat(2,1fr)}.photo-strip{grid-template-columns:repeat(2,1fr)}.scs{grid-template-columns:1fr}.phsec{grid-template-columns:1fr}.cstrip{grid-template-columns:repeat(6,1fr)}.icon-stats-row{grid-template-columns:repeat(2,1fr)}.g-side,.g-side-rev{grid-template-columns:1fr}.rf-grid{grid-template-columns:1fr 1fr}.dual-photo{grid-template-columns:1fr}}
 @media(max-width:600px){.nav-hamburger{display:flex}.nav-links,.nav-badge{display:none}.sec{padding:40px 20px}.rf-section{padding:40px 20px}.cost-grid{grid-template-columns:repeat(2,1fr)}.life-grid{grid-template-columns:repeat(2,1fr)}.photo-strip{grid-template-columns:1fr 1fr}.metric-row{grid-template-columns:repeat(2,1fr)}.cstrip{grid-template-columns:repeat(4,1fr)}.footer{padding:32px 20px}.callout-band{padding:28px 20px}.rf-grid{grid-template-columns:1fr}}
 
-    .mosaic-img, .mosaic-tall, 
 
 
 .metro-map-wrap{background:#fff;border-radius:16px;border:1px solid var(--border);overflow:hidden;margin-bottom:28px}
@@ -646,8 +645,9 @@ body{font-family:"Lexend Deca",sans-serif;background:var(--cream);color:var(--da
 .footer { position: relative; }
 .footer::before {
   content: ''; display: block; height: 4px;
+  grid-column: 1 / -1;
   background: linear-gradient(90deg, #134550 0%, #ACD8D5 40%, #F1593F 100%);
-  margin-bottom: 32px;
+  margin-bottom: 8px;
 }
 .footer::after {
   content: ''; position: absolute;
@@ -1120,7 +1120,283 @@ body{counter-reset:ikch}
 /* ---------- Dividers ---------- */
 .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0}
 </style>
+<style id="ikan-readability">
+/* ===================================================================
+   READABILITY REFINEMENT — larger, calmer, higher-contrast body text.
+   Same editorial language (fonts, colours, layout unchanged); this
+   layer only tunes type scale, leading and ink for a long-form read.
+   =================================================================== */
+body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+
+/* Section lede (italic Crimson) — more air, stronger ink */
+.sec-sub{font-size:20.5px;line-height:1.74;color:#45535d;max-width:700px}
+.sec-sub-lt{color:rgba(178,216,212,.9)}
+
+/* Ease the tight display tracking a hair for legibility */
+.sec-title{letter-spacing:-0.022em}
+
+/* Primary card prose — the workhorse text */
+.card-desc{font-size:14.5px;line-height:1.82;color:#32434d}
+.card-desc-lt{color:rgba(184,218,214,.86)}
+.card-desc ul{padding-left:16px}
+.card-desc li{margin-bottom:7px}
+
+/* Neighbourhood descriptions */
+.nb-desc{font-size:13.5px;line-height:1.78}
+
+/* Overview "why this city" cards */
+.life-title{font-size:13.5px}
+.life-desc{font-size:12.5px;line-height:1.62;color:#46545e}
+
+/* Tips / callouts */
+.tip-text{font-size:14.5px;line-height:1.76}
+
+/* Settling-in steps */
+.step-desc{font-size:14px;line-height:1.74;color:#32434d}
+.step-title{font-size:14.5px}
+
+/* Two-column info rows (transit / metro / visa) */
+.visa-desc{font-size:13.5px;line-height:1.7;color:#32434d}
+
+/* Data tables (rent / schools / flights) */
+.tbl td{font-size:13.5px;line-height:1.62}
+
+/* Hospital cards */
+.hosp-spec{font-size:11.5px;line-height:1.5;padding:3px 9px}
+.hosp-card-name{font-size:15.5px}
+
+/* Emergency table — more row height */
+.etbl td{font-size:13px;padding-top:11px;padding-bottom:11px}
+
+/* Climate season cards */
+.scdesc{font-size:12.5px;line-height:1.72}
+
+/* Watch-out cards */
+.rf-body{font-size:13.5px;line-height:1.72}
+
+/* App toolkit list — lift the smallest text off the floor */
+.an{font-size:13px}
+.ad{font-size:11.5px;line-height:1.6}
+
+/* Cost mini-cards + small labels — a hair more legible */
+.cost-item{font-size:9.5px;line-height:1.5}
+.nb-best{font-size:10.5px}
+.route-mode{font-size:11px}
+</style>
+<style id="ikan-upgrade">
+/* ===================================================================
+   DESIGN UPGRADE — India-guide editorial components: bold stat tiles,
+   full-width directories, pull-quotes, balanced info rows. Same tokens.
+   =================================================================== */
+
+/* Bold colour-blocked stat tiles */
+.stat-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:10px 0 8px}
+@media(max-width:820px){.stat-trio{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.stat-trio{grid-template-columns:1fr}}
+.stat-tile{position:relative;overflow:hidden;border-radius:18px;padding:26px 24px;background:var(--teal);color:#fff}
+.stat-tile::after{content:"";position:absolute;top:-30px;right:-30px;width:108px;height:108px;border-radius:50%;background:rgba(255,255,255,.07)}
+.stat-tile.alt{background:var(--sky);color:var(--teal)}
+.stat-tile.alt::after{background:rgba(19,69,80,.09)}
+.stat-tile.acc{background:var(--acc);color:#fff}
+.stat-tile.acc::after{background:rgba(255,255,255,.14)}
+.stat-tile.gold{background:var(--gold);color:#fff}
+.stat-tile.gold::after{background:rgba(255,255,255,.14)}
+.stat-val{font-family:"Space Grotesk",sans-serif;font-size:40px;font-weight:700;line-height:1;letter-spacing:-0.03em;position:relative;z-index:1}
+.stat-label{font-family:"Space Grotesk",sans-serif;font-size:10.5px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;margin-top:12px;opacity:.74;position:relative;z-index:1}
+.stat-sub{font-size:12.5px;margin-top:7px;opacity:.86;line-height:1.5;position:relative;z-index:1}
+
+/* Full-width directory (hospitals etc.) */
+.dir{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin:8px 0 32px}
+@media(max-width:760px){.dir{grid-template-columns:1fr}}
+.dir-cat{grid-column:1/-1;font-family:"Space Grotesk",sans-serif;font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--acc);margin:20px 0 2px;display:flex;align-items:center;gap:12px}
+.dir-cat::after{content:"";flex:1;height:1px;background:var(--border)}
+.dir-row{display:flex;align-items:flex-start;gap:13px;padding:13px 2px;border-bottom:1px solid var(--border)}
+.dir-dot{flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:var(--teal);margin-top:6px}
+.dir-dot.c{background:var(--acc)}
+.dir-main{flex:1;min-width:0}
+.dir-name{font-family:"Space Grotesk",sans-serif;font-size:14px;font-weight:600;color:var(--teal);line-height:1.25}
+.dir-meta{font-size:12px;color:var(--muted);line-height:1.5;margin-top:3px}
+.dir-tail{font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:600;color:var(--acc);white-space:nowrap;text-decoration:none;margin-top:1px}
+
+/* Editorial pull-quote */
+.quote{position:relative;overflow:hidden;border-radius:20px;padding:44px 48px;background:linear-gradient(135deg,var(--teal2),var(--teal3));margin:8px 0}
+.quote::before{content:"\201C";position:absolute;top:-8px;left:24px;font-family:"Crimson Pro",serif;font-size:150px;line-height:1;color:rgba(172,216,213,.14)}
+.quote-text{font-family:"Crimson Pro",serif;font-style:italic;font-size:27px;font-weight:400;color:#fff;line-height:1.5;position:relative;z-index:1;max-width:860px;letter-spacing:-0.005em}
+.quote-text em{color:var(--sky);font-style:italic}
+.quote-attr{font-family:"Space Grotesk",sans-serif;font-size:11px;color:var(--sky);letter-spacing:1.8px;text-transform:uppercase;margin-top:20px;position:relative;z-index:1;font-weight:500}
+@media(max-width:700px){.quote{padding:30px 24px}.quote-text{font-size:19px}.quote::before{font-size:92px}}
+
+/* Balanced 3-up info row (fills full width) */
+.info3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:10px}
+@media(max-width:860px){.info3{grid-template-columns:1fr}}
+.info-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:26px}
+.info-card.dark{background:var(--teal);border-color:transparent;color:#fff}
+.info-head{font-family:"Crimson Pro",serif;font-size:18px;font-weight:700;color:var(--teal2);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.info-card.dark .info-head{color:#fff}
+.info-body{font-size:13.5px;color:#32434d;line-height:1.74}
+.info-card.dark .info-body{color:rgba(255,255,255,.86)}
+.info-tbl{width:100%;border-collapse:collapse}
+.info-tbl td{padding:9px 0;font-size:13px;border-bottom:1px solid var(--border);color:var(--teal)}
+.info-tbl td:last-child{text-align:right;font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--acc)}
+.info-card.dark .info-tbl td{color:rgba(255,255,255,.9);border-color:rgba(255,255,255,.13)}
+.info-card.dark .info-tbl td:last-child{color:var(--sky)}
+
+/* ---- Neighbourhood cards → clean India "city-card" treatment ---- */
+.nb-card{background:#fff;border:1px solid var(--border);box-shadow:0 1px 2px rgba(16,20,28,.05);border-radius:18px}
+.nb-card:hover{box-shadow:0 20px 50px rgba(19,69,80,.16);transform:translateY(-6px)}
+.nb-img{height:206px}
+.nb-head{background:#fff !important;padding:20px 24px 6px;align-items:center;gap:13px}
+.nb-num{width:30px;height:30px;font-family:"Space Grotesk",sans-serif;font-size:14px;font-weight:700}
+.nb-name{font-family:"Space Grotesk",sans-serif;font-size:21px;font-weight:700;letter-spacing:-0.02em;line-height:1.14;color:var(--teal) !important}
+.nb-vibe{font-family:"Space Grotesk",sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-style:normal !important;opacity:1;margin-top:5px;color:var(--acc) !important}
+.nb-body{background:#fff !important;padding:8px 24px 22px}
+.nb-desc{font-size:14px;line-height:1.78;color:#33454d !important;margin-bottom:14px}
+.nb-tags{gap:6px;margin-bottom:0}
+.nb-tag{background:var(--skyp) !important;color:var(--teal) !important;font-size:9.5px;padding:4px 10px;letter-spacing:.6px}
+.nb-best{background:transparent !important;color:var(--muted) !important;text-align:left;text-transform:none;letter-spacing:.1px;font-weight:500;font-size:12px;line-height:1.5;padding:14px 24px 20px;margin-top:6px;border-top:1px solid var(--border)}
+.nb-best::before{content:"BEST FOR — ";font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--acc);letter-spacing:1.4px;font-size:9.5px}
+/* per-card accent kept only on the number badge + eyebrow */
+.nb1 .nb-num{background:#6c3483 !important;color:#fff !important}.nb1 .nb-vibe{color:#8e44ad !important}
+.nb2 .nb-num{background:#bd8333 !important;color:#fff !important}.nb2 .nb-vibe{color:#9c6a1c !important}
+.nb3 .nb-num{background:#2e7d52 !important;color:#fff !important}.nb3 .nb-vibe{color:#2e7d52 !important}
+.nb4 .nb-num{background:#0D4F5C !important;color:#fff !important}.nb4 .nb-vibe{color:#0d6173 !important}
+.nb5 .nb-num{background:#1a2e45 !important;color:#fff !important}.nb5 .nb-vibe{color:#2c5070 !important}
+.nb6 .nb-num{background:#8b1a1a !important;color:#fff !important}.nb6 .nb-vibe{color:#a53030 !important}
+.nb1 .nb-name,.nb2 .nb-name,.nb3 .nb-name,.nb4 .nb-name,.nb5 .nb-name,.nb6 .nb-name{color:var(--teal) !important}
+.nb1 .nb-desc,.nb2 .nb-desc,.nb3 .nb-desc,.nb4 .nb-desc,.nb5 .nb-desc,.nb6 .nb-desc{color:#33454d !important}
+.nb1 .nb-tag,.nb2 .nb-tag,.nb3 .nb-tag,.nb4 .nb-tag,.nb5 .nb-tag,.nb6 .nb-tag{background:var(--skyp) !important;color:var(--teal) !important}
+.nb1 .nb-best,.nb2 .nb-best,.nb3 .nb-best,.nb4 .nb-best,.nb5 .nb-best,.nb6 .nb-best{background:transparent !important;color:var(--muted) !important}
+.nb-card .nb-best{margin-left:24px;margin-right:24px;padding-left:0;padding-right:0}
+
+/* ---- Section lede: wider measure so it fills the space beside the chapter numeral ---- */
+.sec-sub{max-width:880px}
+
+/* ---- Orphaned last neighbourhood card → full-width horizontal feature (no empty row) ---- */
+.nb-card:last-child:nth-child(3n+1){grid-column:1 / -1;display:grid;grid-template-columns:minmax(300px,40%) 1fr;grid-template-rows:auto auto 1fr}
+.nb-card:last-child:nth-child(3n+1) .nb-img{grid-column:1;grid-row:1 / 4;height:100%;min-height:280px}
+.nb-card:last-child:nth-child(3n+1) .nb-head{grid-column:2;grid-row:1;padding-top:26px}
+.nb-card:last-child:nth-child(3n+1) .nb-body{grid-column:2;grid-row:2}
+.nb-card:last-child:nth-child(3n+1) .nb-best{grid-column:2;grid-row:3;align-self:end}
+@media(max-width:760px){.nb-card:last-child:nth-child(3n+1){grid-template-columns:1fr}.nb-card:last-child:nth-child(3n+1) .nb-img{grid-column:1;grid-row:auto;min-height:0}.nb-card:last-child:nth-child(3n+1) .nb-head,.nb-card:last-child:nth-child(3n+1) .nb-body,.nb-card:last-child:nth-child(3n+1) .nb-best{grid-column:1}}
+
+/* ---- Transit / info rows: label stacked ON TOP (stop label shoving text right) ---- */
+.visa-row{flex-direction:column;align-items:flex-start;gap:8px;padding:18px 22px}
+.visa-type{min-width:0 !important;flex-shrink:1;font-size:10px;letter-spacing:1.6px}
+.visa-desc{font-size:13.5px;line-height:1.72}
+
+/* ---- App toolkit rows → tidy individual tiles ---- */
+.aprow{background:#fff;border:1px solid var(--border);border-radius:13px;padding:13px 15px;margin-bottom:9px;align-items:flex-start;transition:box-shadow .25s,transform .25s}
+.aprow:hover{box-shadow:0 8px 24px rgba(19,69,80,.1);transform:translateY(-2px)}
+.apcat{margin-bottom:0}
+.apct{font-size:10px;letter-spacing:1.6px;margin-bottom:12px;margin-top:6px}
+.aplist{gap:6px}
+
+/* ---- Settling-in steps → cleaner card timeline ---- */
+.step{background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px 22px;transition:box-shadow .28s,transform .28s}
+.step:hover{box-shadow:0 14px 38px rgba(19,69,80,.12);transform:translateY(-3px)}
+.step-num{box-shadow:0 6px 16px rgba(241,89,63,.28)}
+</style>
+<style id="ikan-fix">
+/* a highlight grid that ends up with exactly 3 cards shows 3-up (no empty 4th cell) */
+.g4:has(> .card:last-child:nth-child(3)){grid-template-columns:repeat(3,1fr)}
+.g3:has(> .card:last-child:nth-child(2)){grid-template-columns:repeat(2,1fr)}
+/* mosaic-tall must never inherit a stray border/margin */
+.mosaic-tall{border:0;margin-bottom:0}
+/* mobile: cap images + make wide tables scroll instead of overflowing */
+img{max-width:100%}
+html,body{overflow-x:hidden}
+.tbl-scroll{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+</style>
+<style id="ikan-redesign">
+/* ============================================================
+   IKAN GUIDE REDESIGN v2 — elevate to India-guide standard
+   ============================================================ */
+
+/* ---- STEP CARDS: single card, big italic coral number, no nested white-on-white ---- */
+.steps::before{display:none!important}
+.steps{gap:14px}
+.step{display:flex;gap:26px;align-items:flex-start;background:#fff;border:1px solid rgba(19,69,80,.08);border-radius:18px;padding:26px 30px;box-shadow:0 3px 18px rgba(19,69,80,.05);transition:box-shadow .3s ease,transform .3s ease}
+.step:hover{box-shadow:0 16px 40px rgba(19,69,80,.11);transform:translateY(-3px)}
+.step-num{width:auto!important;height:auto!important;min-width:52px;background:none!important;border:none!important;border-radius:0!important;box-shadow:none!important;font-family:"Crimson Pro",serif!important;font-style:italic!important;font-weight:600!important;font-size:56px!important;line-height:.78!important;color:var(--acc)!important;flex-shrink:0;text-align:center;letter-spacing:-.02em;display:block}
+.step-content{background:none!important;border:none!important;padding:0!important;flex:1;min-width:0}
+.step-title{font-size:16px!important;font-weight:600;color:var(--teal)!important;margin-bottom:8px!important}
+
+/* ---- INFO CARDS (health "Who to go to / IKAN support"): depth + accent, not flat white-on-white ---- */
+.info-card{box-shadow:0 10px 34px rgba(19,69,80,.10)}
+.info-card:not(.dark){border:1px solid rgba(19,69,80,.08);position:relative;overflow:hidden;background:linear-gradient(180deg,#ffffff 0%,#f2f8f7 100%)}
+.info-card:not(.dark)::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sky),var(--teal3))}
+.info-card.dark{box-shadow:0 18px 44px rgba(8,46,56,.24)}
+
+/* ---- CONTENT CARDS (lifestyle / food / social / shopping / language): lift + soft shadow ---- */
+.card{box-shadow:0 2px 14px rgba(19,69,80,.045)}
+.card:hover{box-shadow:0 18px 42px rgba(19,69,80,.10);transform:translateY(-4px)}
+
+/* ---- NAV: one clean line, never break mid-label; scroll gracefully if narrow ---- */
+.nav-links{flex-wrap:nowrap!important;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;gap:0}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{white-space:nowrap;padding:6px 7px;font-size:9.5px;flex-shrink:0}
+
+/* ---- LANGUAGE PHRASEBOOK: native script + romanization (India-guide elegance) ---- */
+.phrasebook{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:10px}
+.phrase{display:flex;gap:20px;align-items:center;background:#fff;border:1px solid rgba(19,69,80,.08);border-radius:18px;padding:20px 24px;box-shadow:0 3px 16px rgba(19,69,80,.05);transition:transform .3s,box-shadow .3s}
+.phrase:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(19,69,80,.10)}
+.phrase-native{font-size:31px;line-height:1.15;color:var(--teal);font-weight:600;min-width:94px;max-width:94px;flex-shrink:0;text-align:center;padding-right:18px;border-right:2px solid rgba(142,203,203,.45)}
+.phrase-body{flex:1;min-width:0}
+.phrase-label{font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal3);opacity:.55;margin-bottom:6px;display:block}
+.phrase-roman{font-family:"Crimson Pro",serif;font-style:italic;font-size:22px;line-height:1.1;color:var(--acc);font-weight:600;margin-bottom:5px}
+.phrase-mean{font-size:12.5px;color:#3A5060;line-height:1.6}
+@media(max-width:760px){.phrasebook{grid-template-columns:1fr}.phrase-native{font-size:27px;min-width:72px;max-width:72px}}
+
+/* ---- IMPACTFUL CLOSING BAND ---- */
+.closing-band{background:linear-gradient(135deg,var(--teal2) 0%,var(--teal3) 58%,#17616f 100%);border-radius:30px;padding:80px 56px;text-align:center;position:relative;overflow:hidden}
+.closing-band::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(172,214,212,.18),transparent 70%)}
+.closing-eyebrow{position:relative;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:22px}
+.closing-title{position:relative;font-family:"Crimson Pro",serif;font-size:clamp(32px,4.6vw,54px);line-height:1.1;color:#fff;font-weight:600;margin:0 auto 26px;max-width:780px}
+.closing-title em{font-style:italic;color:var(--sky)}
+.closing-body{position:relative;font-size:16px;line-height:1.85;color:rgba(230,244,242,.82);max-width:600px;margin:0 auto 38px}
+.closing-cta{position:relative;display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:#fff;font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:14px;letter-spacing:.02em;padding:16px 32px;border-radius:999px;text-decoration:none;box-shadow:0 14px 36px rgba(241,89,63,.34);transition:transform .25s,box-shadow .25s}
+.closing-cta:hover{transform:translateY(-2px);box-shadow:0 20px 46px rgba(241,89,63,.44)}
+.closing-meta{position:relative;margin-top:28px;font-size:12.5px;letter-spacing:.04em;color:rgba(172,214,212,.72)}
+@media(max-width:760px){.closing-band{padding:54px 26px;border-radius:22px}}
+
+/* ---- VISA: FRRO infobox + "arriving at airport" card — depth + refined bullets ---- */
+.infobox{border:1px solid rgba(172,214,212,.2);box-shadow:0 14px 38px rgba(0,0,0,.22)}
+.card-navy{border:1px solid rgba(172,214,212,.16)!important;box-shadow:0 14px 38px rgba(0,0,0,.22)}
+.card-desc-lt ul{list-style:none;padding:0;margin:0}
+.card-desc-lt ul li{position:relative;padding-left:22px;margin-bottom:10px}
+.card-desc-lt ul li::before{content:"\203A";position:absolute;left:5px;top:-2px;color:var(--sky);font-weight:700;font-size:16px}
+
+/* ---- PHONE MOCKUP: richer iOS-style squircle icon tiles ---- */
+.phs{background:linear-gradient(180deg,#0f1724,#0a0f18)}
+.pai{background:linear-gradient(145deg,#243044,#161e2c)!important;border-radius:14px!important;box-shadow:0 3px 9px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.06)}
+.em{font-size:20px!important}
+</style>
+<style id="ikan-orphan">
+/* A lone last card in a 2/3/4-col grid becomes a full-width horizontal feature — no stranded empty space */
+.g2:has(> .card:last-child:nth-child(2n+1)) > .card:last-child:has(.card-img),
+.g3:has(> .card:last-child:nth-child(3n+1)) > .card:last-child:has(.card-img),
+.g4:has(> .card:last-child:nth-child(4n+1)) > .card:last-child:has(.card-img){grid-column:1/-1;display:grid!important;grid-template-columns:minmax(270px,40%) 1fr;align-items:stretch;padding:0;overflow:hidden}
+.g2:has(> .card:last-child:nth-child(2n+1)) > .card:last-child:has(.card-img) > .card-img,
+.g3:has(> .card:last-child:nth-child(3n+1)) > .card:last-child:has(.card-img) > .card-img,
+.g4:has(> .card:last-child:nth-child(4n+1)) > .card:last-child:has(.card-img) > .card-img{height:100%!important;min-height:215px}
+.g2:has(> .card:last-child:nth-child(2n+1)) > .card:last-child:not(:has(.card-img)),
+.g3:has(> .card:last-child:nth-child(3n+1)) > .card:last-child:not(:has(.card-img)),
+.g4:has(> .card:last-child:nth-child(4n+1)) > .card:last-child:not(:has(.card-img)){grid-column:1/-1;max-width:560px;margin-left:auto;margin-right:auto}
+@media(max-width:760px){.g2:has(> .card:last-child:nth-child(2n+1)) > .card:last-child:has(.card-img),.g3:has(> .card:last-child:nth-child(3n+1)) > .card:last-child:has(.card-img),.g4:has(> .card:last-child:nth-child(4n+1)) > .card:last-child:has(.card-img){grid-template-columns:1fr}}
+</style>
+<style id="ikan-cardaccent">
+/* Colour-coded top accent on chip cards — more "designed", organises by category */
+.card:has(.chip-acc){border-top:3px solid var(--acc)}
+.card:has(.chip-sky){border-top:3px solid var(--teal3)}
+.card:has(.chip-gold){border-top:3px solid var(--gold)}
+.card:has(.chip-green){border-top:3px solid var(--green)}
+/* bigger, clearer chips */
+/* g2-balance-fix: 2-card pairs never stretch into empty boxes */
+.g2{align-items:start}
+.chip{font-size:9px!important;letter-spacing:1.2px!important;padding:5px 11px!important;border-radius:7px!important}
+</style>
 </head>
+
 <body>
 
 <nav class="nav" aria-label="Primary navigation">
@@ -1159,7 +1435,7 @@ body{counter-reset:ikch}
   <a href="#practical">Settling In</a>
 </div>
 <section class="hero">
-  <div class="hero-bg" style="background-image:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Charminar_front_view.JPG')"></div>
+  <div class="hero-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Charminar_front_view.JPG/1920px-Charminar_front_view.JPG')"></div>
   <div class="hero-overlay"></div><div class="hero-overlay2"></div><div class="hero-pattern"></div>
   <div class="hero-content">
     <div class="hero-eyebrow"><div class="hero-dot"></div><span class="hero-eyebrow-text"><span style="color:var(--acc) !important;font-size:inherit">IKAN</span> Destination Guide · 2026 Edition · India Domestic Move</span></div>
@@ -1173,30 +1449,31 @@ body{counter-reset:ikch}
 </section>
 <div class="mosaic-band">
   <div class="photo-mosaic">
-    <img id="img_mos1" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Golconda_Fort_2.jpg" alt="Golconda Fort Hyderabad" width="900" height="460" loading="lazy">
-    <img id="img_mos2" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Birla%20Mandir%2C%20Hyderabad%2C%20India.JPG" alt="Birla Mandir marble temple Hyderabad" width="600" height="460" loading="lazy" referrerpolicy="no-referrer">
-    <img id="img_mos3" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Telangana%20Secretariat%202.jpg" alt="Dr B R Ambedkar Telangana State Secretariat Hyderabad" width="600" height="460" loading="lazy" referrerpolicy="no-referrer">
-    <img id="img_mos4" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Hyderabadi_Biryani.JPG" alt="Hyderabadi chicken biryani" width="600" height="460" loading="lazy">
-    <img id="img_food2b" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/View%20of%20service%20road%20junction%20towards%20Nanakramguda%2C%20November%202025.jpg" alt="Financial District towers near Nanakramguda Hyderabad" width="600" height="460" loading="lazy" referrerpolicy="no-referrer">
+    <img id="img_mos1" class="mosaic-tall" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golconda_Fort_2.jpg/1280px-Golconda_Fort_2.jpg" alt="Golconda Fort Hyderabad" width="900" height="460" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Golconda_Fort_2.jpg'">
+    <img id="img_mos2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Birla_Mandir%2C_Hyderabad%2C_India.JPG/1280px-Birla_Mandir%2C_Hyderabad%2C_India.JPG" alt="Birla Mandir marble temple Hyderabad" width="600" height="460" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Birla%20Mandir%2C%20Hyderabad%2C%20India.JPG'">
+    <img id="img_mos3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Telangana_Secretariat_2.jpg/1280px-Telangana_Secretariat_2.jpg" alt="Dr B R Ambedkar Telangana State Secretariat Hyderabad" width="600" height="460" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Telangana%20Secretariat%202.jpg'">
+    <img id="img_mos4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Chicken_Hyderabadi_Biryani.JPG/1280px-Chicken_Hyderabadi_Biryani.JPG" alt="Hyderabadi chicken biryani" width="600" height="460" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken_Hyderabadi_Biryani.JPG'">
+    <img id="img_food2b" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/View_of_service_road_junction_towards_Nanakramguda%2C_November_2025.jpg/1280px-View_of_service_road_junction_towards_Nanakramguda%2C_November_2025.jpg" alt="Financial District towers near Nanakramguda Hyderabad" width="600" height="460" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/View%20of%20service%20road%20junction%20towards%20Nanakramguda%2C%20November%202025.jpg'">
   </div>
 </div>
 <section class="sec s-cream" id="overview">
   <div class="session-globe" aria-hidden="true"></div>
   <div class="eyebrow">🏙️ City Overview</div>
-  <h2 class="sec-title">The Pearl of the Deccan</h2>
+  <h2 class="sec-title">The Pearl of the <em>Deccan</em></h2>
+  <p class="sec-sub">India's most liveable major city pairs 400 years of Nizami heritage with a tech corridor second only to Bangalore — outstanding infrastructure, costs below Bangalore, world-class hospitals, and a famously welcoming culture that makes every newcomer feel at home.</p>
   <div class="quote-block fu">
     <div class="quote-text">"Hyderabad is the rare city where a 400-year-old Nizami palace stands across the road from a Google campus — and both feel completely at home. It's a cultural melting pot that makes every newcomer feel welcome."</div>
     <div class="quote-body">Hyderabad has engineered one of the most remarkable urban transformations of the 21st century. The City of Pearls — once the seat of the Nizam dynasty — has reinvented itself as India's second-largest tech hub after Bangalore. Over 1,500 MNCs including Microsoft, Google, Amazon, Apple, Meta, and TCS have established major operations in what is now called HITEC City and Cyberabad — the contiguous IT belt that falls under the single Cyberabad Commissionerate. For the Indian professional relocating here, Hyderabad delivers a compelling combination: costs 10–15% lower than Bangalore, India's finest road infrastructure outside Delhi, outstanding private hospitals, a remarkable school ecosystem, and a city culture defined by the legendary warmth and hospitality of Hyderabadis — a true cultural melting pot that welcomes every Indian community, every cuisine, and every way of life.</div>
   </div>
-  <div class="metric-row fu">
-    <div class="metric"><div class="metric-val">1,500+</div><div class="metric-label">MNCs in HITEC City</div></div>
-    <div class="metric"><div class="metric-val">#1</div><div class="metric-label">JLL Most Liveable 2024</div></div>
-    <div class="metric"><div class="metric-val">162km</div><div class="metric-label">Outer Ring Road</div></div>
-    <div class="metric"><div class="metric-val">400 yrs</div><div class="metric-label">Nizami Cultural Heritage</div></div>
+  <div class="stat-trio fu" style="grid-template-columns:repeat(4,1fr)">
+    <div class="stat-tile"><div class="stat-val">1,500+</div><div class="stat-label">MNCs in HITEC City</div><div class="stat-sub">Microsoft, Google, Amazon, Apple, Meta</div></div>
+    <div class="stat-tile alt"><div class="stat-val">#1</div><div class="stat-label">JLL Most Liveable 2024</div><div class="stat-sub">Top-ranked Indian city for liveability</div></div>
+    <div class="stat-tile gold"><div class="stat-val">162km</div><div class="stat-label">Outer Ring Road</div><div class="stat-sub">India's most planned urban road network</div></div>
+    <div class="stat-tile acc"><div class="stat-val">400 yrs</div><div class="stat-label">Nizami Cultural Heritage</div><div class="stat-sub">From the Nizam dynasty to today</div></div>
   </div>
   <div class="dual-photo fu">
-    <img id="img_ov1" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Hitech%20city%20hyderabad%2004.jpg" alt="HITEC City Hyderabad IT corridor towers" width="900" height="400" loading="lazy" referrerpolicy="no-referrer">
-    <img id="img_ov2" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Synchrony%20Raidurg%20metro%20station%20%2816262%29.jpg" alt="Raidurg metro station Hyderabad" width="800" height="400" loading="lazy" referrerpolicy="no-referrer">
+    <img id="img_ov1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Hitech_city_hyderabad_04.jpg/1280px-Hitech_city_hyderabad_04.jpg" alt="HITEC City Hyderabad IT corridor towers" width="900" height="400" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Hitech%20city%20hyderabad%2004.jpg'">
+    <img id="img_ov2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Synchrony_Raidurg_metro_station_%2816262%29.jpg/1280px-Synchrony_Raidurg_metro_station_%2816262%29.jpg" alt="Raidurg metro station Hyderabad" width="800" height="400" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Synchrony%20Raidurg%20metro%20station%20%2816262%29.jpg'">
   </div>
   <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--teal);margin-bottom:20px" class="fu">Why Professionals Move to Hyderabad</h3>
   <div class="life-grid fu">
@@ -1237,7 +1514,7 @@ body{counter-reset:ikch}
 <div class="divider"></div>
 <section class="sec s-dark" id="compare">
   <div class="eyebrow eyebrow-lt">⚖️ How Hyderabad Compares</div>
-  <h2 class="sec-title sec-title-lt">Hyderabad vs Your Current City</h2>
+  <h2 class="sec-title sec-title-lt">Hyderabad vs <em>Your Current City</em></h2>
   <p class="sec-sub sec-sub-lt">Understanding what genuinely changes — and what improves — when you move to Hyderabad from another Indian metro.</p>
   <div class="fu" style="overflow-x:auto">
     <table class="city-compare" style="min-width:700px">
@@ -1277,49 +1554,49 @@ body{counter-reset:ikch}
     <div style="font-size:11px;color:var(--muted)">cheaper across all categories</div>
   </div>
 </div></section>
-<img id="img_fw" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Perspective%20view%20of%20My%20Home%20Bhooja.jpg" alt="My Home Bhooja premium residential towers Raidurgam Hyderabad" width="1600" height="340" loading="lazy" referrerpolicy="no-referrer" style="width:100%;height:340px;object-fit:cover;object-position:center 42%">
+<img id="img_fw" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Perspective_view_of_My_Home_Bhooja.jpg/1280px-Perspective_view_of_My_Home_Bhooja.jpg" alt="My Home Bhooja premium residential towers Raidurgam Hyderabad" width="1600" height="340" loading="lazy" referrerpolicy="no-referrer" style="width:100%;height:340px;object-fit:cover;object-position:center 42%" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Perspective%20view%20of%20My%20Home%20Bhooja.jpg'">
 <section class="sec s-creamd" id="neighbourhoods">
   <div class="eyebrow">🏘️ Where to Live</div>
-  <h2 class="sec-title">Recommended Neighbourhoods</h2>
+  <h2 class="sec-title">Recommended <em>Neighbourhoods</em></h2>
   <p class="sec-sub">Hyderabad's professional residential belt runs through the western corridor — staying within Jubilee Hills to Gachibowli keeps you 10–20 minutes from every major MNC campus, international school, and premium hospital.</p>
   <div class="g3 fu">
     <div class="nb-card nb1">
-      <img id="img_nb1" class="nb-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20junture%20of%20LV%20Prasad%20Marg%2C%20Kaifi%20Azmi%20road%2C%20Banjara%20hills%201.jpg" alt="Tree-lined road junction in Banjara Hills Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer">
+      <img id="img_nb1" class="nb-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/The_junture_of_LV_Prasad_Marg%2C_Kaifi_Azmi_road%2C_Banjara_hills_1.jpg/1280px-The_junture_of_LV_Prasad_Marg%2C_Kaifi_Azmi_road%2C_Banjara_hills_1.jpg" alt="Tree-lined road junction in Banjara Hills Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20junture%20of%20LV%20Prasad%20Marg%2C%20Kaifi%20Azmi%20road%2C%20Banjara%20hills%201.jpg'">
       <div class="nb-head"><div class="nb-num">1</div><div><div class="nb-name">Banjara Hills</div><div class="nb-vibe">The Most Prestigious Address</div></div></div>
       <div class="nb-body"><div class="nb-desc">Hyderabad's finest residential and social address. The city's best fine-dining restaurants, star hotels (ITC Kakatiya, The Park), premium retail and shopping, and top hospitals are all within easy reach. Home to senior executives, diplomats, and MNC country heads. Roads 10, 12, and 36 are the addresses to target.</div>
       <div class="nb-tags"><span class="nb-tag">Fine Dining</span><span class="nb-tag">Star Hotels</span><span class="nb-tag">Shopping Hotspot</span><span class="nb-tag">Hospitals Nearby</span></div>
       <div class="nb-best">Best for: Senior Executives &amp; Country Heads</div></div>
     </div>
     <div class="nb-card nb2">
-      <img id="img_nb2" class="nb-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20bird%27s%20view%20of%20KBR%20Park%20entrance.jpg" alt="KBR National Park greenery beside Jubilee Hills Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer">
+      <img id="img_nb2" class="nb-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/A_bird%27s_view_of_KBR_Park_entrance.jpg/1280px-A_bird%27s_view_of_KBR_Park_entrance.jpg" alt="KBR National Park greenery beside Jubilee Hills Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20bird%27s%20view%20of%20KBR%20Park%20entrance.jpg'">
       <div class="nb-head"><div class="nb-num">2</div><div><div class="nb-name">Jubilee Hills</div><div class="nb-vibe">Family Heartland</div></div></div>
       <div class="nb-body"><div class="nb-desc">Hyderabad's most popular neighbourhood for families. Excellent international school proximity (ISH, Oakridge), multiple premium hospitals within 15 minutes, strong community, and premium apartments alongside a limited selection of villas. IKAN places most Hyderabad families here.</div>
       <div class="nb-tags"><span class="nb-tag">Int'l Schools</span><span class="nb-tag">Expat Community</span><span class="nb-tag">Premium Villas</span><span class="nb-tag">Hospitals Nearby</span></div>
       <div class="nb-best">Best for: Families with School-Age Children</div></div>
     </div>
     <div class="nb-card nb3">
-      <img id="img_nb3" class="nb-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Gachibowli%20IT%20%26%20Financial%20District%20Skyline%20View%2C%20Dec%202018.jpg" alt="Gachibowli IT and Financial District skyline near ISB Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer">
+      <img id="img_nb3" class="nb-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Gachibowli_IT_%26_Financial_District_Skyline_View%2C_Dec_2018.jpg/1280px-Gachibowli_IT_%26_Financial_District_Skyline_View%2C_Dec_2018.jpg" alt="Gachibowli IT and Financial District skyline near ISB Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Gachibowli%20IT%20%26%20Financial%20District%20Skyline%20View%2C%20Dec%202018.jpg'">
       <div class="nb-head"><div class="nb-num">3</div><div><div class="nb-name">Gachibowli</div><div class="nb-vibe">Tech Hub — Zero Commute</div></div></div>
       <div class="nb-body"><div class="nb-desc">Zero-commute living for tech and finance professionals. Walk to Microsoft India HQ, Wipro, Cyient, DXC Technology, Goldman Sachs campuses. New apartment towers, growing café scene, University of Hyderabad green belt, and Durgam Cheruvu lake for recreation.</div>
       <div class="nb-tags"><span class="nb-tag">Zero Commute</span><span class="nb-tag">MNC Campuses</span><span class="nb-tag">Durgam Cheruvu</span><span class="nb-tag">Modern Towers</span></div>
       <div class="nb-best">Best for: Tech &amp; Finance Professionals</div></div>
     </div>
     <div class="nb-card nb4">
-      <img id="img_nb4" class="nb-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Orbit%20by%20Auro%20Realty%2C%20Hitech%20City.jpg" alt="Modern office tower in HITEC City Madhapur Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer">
+      <img id="img_nb4" class="nb-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Orbit_by_Auro_Realty%2C_Hitech_City.jpg/1280px-Orbit_by_Auro_Realty%2C_Hitech_City.jpg" alt="Modern office tower in HITEC City Madhapur Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Orbit%20by%20Auro%20Realty%2C%20Hitech%20City.jpg'">
       <div class="nb-head"><div class="nb-num">4</div><div><div class="nb-name">Madhapur &amp; HITEC City</div><div class="nb-vibe">The Tech Core</div></div></div>
       <div class="nb-body"><div class="nb-desc">HITEC City and Madhapur are two distinct, adjoining areas at the heart of Hyderabad's tech corridor. HITEC City is the corporate core — Cyber Towers and the Microsoft–Amazon–Google campus strip. Madhapur is the high-energy residential pocket favoured by young professionals and single techies (largely an Indian-preferred location), with the best restaurants and bars in the city, strong metro connectivity, and Inorbit Mall. Neighbouring Raidurgam is the newer, premium pocket most preferred by expats.</div>
       <div class="nb-tags"><span class="nb-tag">HITEC City</span><span class="nb-tag">Metro Connected</span><span class="nb-tag">Restaurants &amp; Bars</span><span class="nb-tag">Convenience</span></div>
       <div class="nb-best">Best for: HITEC City Workers &amp; Young Professionals</div></div>
     </div>
     <div class="nb-card nb5">
-      <img id="img_nb5" class="nb-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Sarath%20City%20Capital%20Mall%20%2813776%29.jpg" alt="Sarath City Capital Mall Kondapur Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer">
+      <img id="img_nb5" class="nb-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Sarath_City_Capital_Mall_%2813776%29.jpg/1280px-Sarath_City_Capital_Mall_%2813776%29.jpg" alt="Sarath City Capital Mall Kondapur Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Sarath%20City%20Capital%20Mall%20%2813776%29.jpg'">
       <div class="nb-head"><div class="nb-num">5</div><div><div class="nb-name">Kondapur &amp; Manikonda</div><div class="nb-vibe">Best Value — IT Access</div></div></div>
       <div class="nb-body"><div class="nb-desc">The affordable alternative to HITEC City and Gachibowli — still within 10–15 minutes of all major campuses but rents 25–35% lower. Manikonda in particular is a purely value-housing pocket. Large gated communities with full amenities, strong school proximity. Excellent for families on tighter housing budgets.</div>
       <div class="nb-tags"><span class="nb-tag">Best Value</span><span class="nb-tag">Gated Complexes</span><span class="nb-tag">IT Access</span><span class="nb-tag">Family-Friendly</span></div>
       <div class="nb-best">Best for: Budget-Conscious Families</div></div>
     </div>
     <div class="nb-card nb6">
-      <img id="img_nb6" class="nb-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kokapet%20Financial%20District%20Skyline%20%E2%80%93%20View%20from%20Neopolis.jpg" alt="Financial District skyline at Kokapet Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer">
+      <img id="img_nb6" class="nb-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Kokapet_Financial_District_Skyline_%E2%80%93_View_from_Neopolis.jpg/1280px-Kokapet_Financial_District_Skyline_%E2%80%93_View_from_Neopolis.jpg" alt="Financial District skyline at Kokapet Hyderabad" width="600" height="170" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Kokapet%20Financial%20District%20Skyline%20%E2%80%93%20View%20from%20Neopolis.jpg'">
       <div class="nb-head"><div class="nb-num">6</div><div><div class="nb-name">Financial District</div><div class="nb-vibe">Premium Corporate Quarter</div></div></div>
       <div class="nb-body"><div class="nb-desc">Hyderabad's newest and most planned residential quarter — adjacent to Deloitte, HSBC, Bank of America, and NASSCOM campuses. Ultra-modern premium gated villas and apartments, wide clean roads, and the best corporate township living in Telangana.</div>
       <div class="nb-tags"><span class="nb-tag">New Construction</span><span class="nb-tag">Premium Villas</span><span class="nb-tag">Finance Belt</span><span class="nb-tag">Clean Wide Roads</span></div>
@@ -1338,7 +1615,7 @@ body{counter-reset:ikch}
 <div class="divider"></div>
 <section class="sec s-cream" id="housing">
   <div class="eyebrow">🏠 Rents &amp; Costs</div>
-  <h2 class="sec-title">Housing Market</h2>
+  <h2 class="sec-title">Housing Market — <em>2026 reality</em></h2>
   <p class="sec-sub">All rents in INR per month. Figures reflect furnished apartments in gated complexes with 24hr security, DG backup, covered parking, gym and pool. Hyderabad offers significantly better value per sq ft than Bangalore or Mumbai for comparable quality.</p>
   <div class="cost-grid fu">
     <div class="cost-card"><div class="cost-head" style="background:#4a2c82">HOME</div><div class="cost-body"><span class="cost-icon">&#127968;</span><div class="cost-item">3BHK furnished Jubilee Hills</div><div class="cost-price" style="color:#4a2c82">&#8377;1.2–2L</div><div class="cost-unit">per month</div></div></div>
@@ -1349,7 +1626,7 @@ body{counter-reset:ikch}
     <div class="cost-card"><div class="cost-head" style="background:#0097A7">HEALTH</div><div class="cost-body"><span class="cost-icon">&#127973;&#65039;</span><div class="cost-item">GP consultation private</div><div class="cost-price" style="color:#0097A7">&#8377;400–1,200</div><div class="cost-unit">per visit</div></div></div>
     <div class="cost-card"><div class="cost-head" style="background:#c8933a">HELP</div><div class="cost-body"><span class="cost-icon">&#129529;</span><div class="cost-item">Full-time domestic help</div><div class="cost-price" style="color:#c8933a">&#8377;7–12K</div><div class="cost-unit">per month</div></div></div>
   </div>
-  <table class="tbl fu">
+  <div class="tbl-scroll"><table class="tbl fu">
     <thead><tr><th>Zone / Area</th><th>3 BHK</th><th>4 BHK+</th><th>What You Get</th></tr></thead>
         <tbody>
       <tr><td><strong>Kondapur / Manikonda</strong></td><td>&#8377;65,000–1,50,000</td><td>&#8377;1,80,000–2,50,000</td><td>Best value western corridor, gated complexes, IT access</td></tr>
@@ -1360,8 +1637,8 @@ body{counter-reset:ikch}
       <tr><td><strong>Financial District</strong></td><td>&#8377;85,000–1,50,000</td><td>&#8377;1,70,000–6,00,000</td><td>New construction, finance sector, wide clean roads</td></tr>
       <tr><td><strong>Kokapet / Narsingi</strong></td><td>&#8377;85,000–1,80,000</td><td>&#8377;1,80,000–6,00,000</td><td>New construction, connectivity to ORR, expansion city</td></tr>
     </tbody>
-  </table>
-  <img id="img_house" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Residential%20Building%2C%20Hyderabad%2C%2020022015.jpg" alt="Modern apartment building Hyderabad" width="800" height="260" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:10px;margin-bottom:20px">
+  </table></div>
+  <img id="img_house" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Residential_Building%2C_Hyderabad%2C_20022015.jpg/1280px-Residential_Building%2C_Hyderabad%2C_20022015.jpg" alt="Modern apartment building Hyderabad" width="800" height="260" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:10px;margin-bottom:20px" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Residential%20Building%2C%20Hyderabad%2C%2020022015.jpg'">
   <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--teal);margin:24px 0 16px" class="fu">Rental Market Practices</h3>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" class="fu">
     <div class="rent-pair"><div class="rent-label">🔐 Security Deposit</div><div class="rent-val">3 months rent is standard (refundable). Paid at lease signing.</div></div>
@@ -1375,15 +1652,15 @@ body{counter-reset:ikch}
 <div class="divider"></div>
 <section class="sec s-creamd" id="schools">
   <div class="eyebrow">🎓 Education</div>
-  <h2 class="sec-title">Schools in Hyderabad</h2>
+  <h2 class="sec-title">Schools in <em>Hyderabad</em></h2>
   <p class="sec-sub">Hyderabad's western corridor has the highest concentration of quality schools across CBSE, Cambridge, IB and IGCSE streams. Begin applications well before your move — waitlists of 3–6 months are common at top schools.</p>
   <div class="photo-strip fu">
-    <img id="img_sch1" class="card-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Oakridge_International_School.JPG" alt="Oakridge International School Hyderabad" width="400" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover">
-    <img id="img_sch2" class="card-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Meru_International_School%2C_Hyderabad.jpg" alt="Meru International School Hyderabad" width="400" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover">
-    <img id="img_sch3" class="card-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Open_Minds_A_Birla_School.jpg" alt="Open Minds Birla School Hyderabad" width="400" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover">
-    <img id="img_sch4" class="card-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Atal_Tinkering_Lab_at_Silver_Oaks_Intl_School_Hyderabad.jpg" alt="Silver Oaks International School Hyderabad tinkering lab" width="400" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover">
+    <img id="img_sch1" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Oakridge_International_School.JPG/1280px-Oakridge_International_School.JPG" alt="Oakridge International School Hyderabad" width="400" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Oakridge_International_School.JPG'">
+    <img id="img_sch2" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Meru_International_School%2C_Hyderabad.jpg/1280px-Meru_International_School%2C_Hyderabad.jpg" alt="Meru International School Hyderabad" width="400" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Meru_International_School%2C_Hyderabad.jpg'">
+    <img id="img_sch3" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Open_Minds_A_Birla_School.jpg/1280px-Open_Minds_A_Birla_School.jpg" alt="Open Minds Birla School Hyderabad" width="400" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Open_Minds_A_Birla_School.jpg'">
+    <img id="img_sch4" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Atal_Tinkering_Lab_at_Silver_Oaks_Intl_School_Hyderabad.jpg/1280px-Atal_Tinkering_Lab_at_Silver_Oaks_Intl_School_Hyderabad.jpg" alt="Silver Oaks International School Hyderabad tinkering lab" width="400" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Atal_Tinkering_Lab_at_Silver_Oaks_Intl_School_Hyderabad.jpg'">
   </div>
-  <table class="tbl fu">
+  <div class="tbl-scroll"><table class="tbl fu">
     <thead><tr><th>School</th><th>Board</th><th>Location</th><th>Notes</th></tr></thead>
     <tbody>
       <tr><td><strong>CHIREC International School</strong></td><td><span class="stag">Cambridge (IGCSE)</span><span class="stag">CBSE</span></td><td>Kondapur / Gachibowli / Jubilee Hills</td><td>Multi-campus. Cambridge and CBSE. Strong academics and extracurriculars across the western corridor.</td></tr>
@@ -1409,100 +1686,61 @@ body{counter-reset:ikch}
       <tr><td><strong>Indus International School</strong></td><td><span class="stag">IB PYP/MYP/DP</span></td><td>Jubilee Hills (Pre-Primary) / Mokila</td><td>Full IB continuum. Day and boarding options. Strong sports. Boarding at Mokila campus.</td></tr>
           <tr><td><strong>International School of Hyderabad (ISH)</strong></td><td><span class="stag">IB PYP/MYP/DP</span></td><td>Patancheru</td><td>Flagship full-IB school. Most widely attended by international families in Hyderabad.</td></tr>
     </tbody>
-  </table>
+  </table></div>
   <div class="tip fu"><div class="tip-icon">&#127979;</div><div class="tip-text"><strong>IKAN School Placement:</strong> Top CBSE schools typically carry waitlists of 3–6 months. Begin applications before your move. IKAN recommends schools based on your corridor, curriculum preference, and children's current grade level.</div></div>
 </section>
 <div class="divider"></div>
 <section class="sec s-cream" id="health">
   <div class="eyebrow">🏥 Healthcare</div>
-  <h2 class="sec-title">Healthcare in Hyderabad</h2>
+  <h2 class="sec-title">A genuine <em>medical capital</em></h2>
   <p class="sec-sub">Hyderabad has emerged as one of India's premier medical cities — JCI-accredited facilities, English-speaking specialists, and costs 30–40% lower than Mumbai or Bangalore.</p>
   <div class="dual-photo" style="margin-bottom:28px">
-    <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Yashoda%20Hospitals%20Somajiguda.jpg" alt="Yashoda Hospitals Somajiguda Hyderabad" width="900" height="300" loading="lazy" referrerpolicy="no-referrer">
-    <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/AIG%20Hospitals%2C%20Hyderabad.jpg" alt="AIG Hospitals Gachibowli Hyderabad" width="900" height="300" loading="lazy" referrerpolicy="no-referrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Yashoda_Hospitals_Somajiguda.jpg" alt="Yashoda Hospitals Somajiguda Hyderabad" width="900" height="300" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Yashoda%20Hospitals%20Somajiguda.jpg'">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/AIG_Hospitals%2C_Hyderabad.jpg/1280px-AIG_Hospitals%2C_Hyderabad.jpg" alt="AIG Hospitals Gachibowli Hyderabad" width="900" height="300" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/AIG%20Hospitals%2C%20Hyderabad.jpg'">
   </div>
-    <div class="hosp-grid">
-    <div class="hosp-card">
-      <div class="hosp-card-name">AIG Hospitals</div>
-      <div class="hosp-card-loc">📍 Gachibowli</div>
-      <a href="tel:040-4244-4222" class="hosp-card-phone">040-4244-4222</a>
-      <div><span class="hosp-spec">Gastroenterology · Oncology</span></div>
+  <div class="stat-trio fu">
+    <div class="stat-tile"><div class="stat-val">9+</div><div class="stat-label">Major Private Hospitals</div><div class="stat-sub">Multi-specialty care clustered along the western corridor</div></div>
+    <div class="stat-tile alt"><div class="stat-val">JCI</div><div class="stat-label">Gold-Standard Accreditation</div><div class="stat-sub">Held by Apollo Hospitals, Nanakramguda</div></div>
+    <div class="stat-tile acc"><div class="stat-val">30–40%</div><div class="stat-label">Cheaper Than Mumbai / BLR</div><div class="stat-sub">English-speaking specialists at lower cost</div></div>
+  </div>
+  <div class="dir fu">
+    <div class="dir-cat">Multispecialty &amp; Transplant</div>
+    <div class="dir-row"><span class="dir-dot"></span><div class="dir-main"><div class="dir-name">AIG Hospitals</div><div class="dir-meta">Gachibowli · Gastroenterology &amp; oncology</div></div><a href="tel:040-4244-4222" class="dir-tail">040-4244-4222</a></div>
+    <div class="dir-row"><span class="dir-dot"></span><div class="dir-main"><div class="dir-name">Apollo Hospitals</div><div class="dir-meta">Nanakramguda · Multi-specialty · JCI accredited</div></div><a href="tel:040-2360-7777" class="dir-tail">040-2360-7777</a></div>
+    <div class="dir-row"><span class="dir-dot"></span><div class="dir-main"><div class="dir-name">Yashoda Hospitals</div><div class="dir-meta">HITEC City · Cardiac &amp; neurology</div></div><a href="tel:040-4567-4567" class="dir-tail">040-4567-4567</a></div>
+    <div class="dir-row"><span class="dir-dot"></span><div class="dir-main"><div class="dir-name">KIMS Hospitals</div><div class="dir-meta">Kondapur · Multi-specialty</div></div><a href="tel:040-4488-5000" class="dir-tail">040-4488-5000</a></div>
+    <div class="dir-row"><span class="dir-dot"></span><div class="dir-main"><div class="dir-name">Continental Hospitals</div><div class="dir-meta">Nanakramguda · Oncology &amp; transplant</div></div><a href="tel:040-6700-0000" class="dir-tail">040-6700-0000</a></div>
+    <div class="dir-row"><span class="dir-dot"></span><div class="dir-main"><div class="dir-name">Arete Hospitals</div><div class="dir-meta">Gachibowli · Multi-specialty &amp; oncology</div></div><a href="tel:040-6726-6726" class="dir-tail">040-6726-6726</a></div>
+    <div class="dir-cat">Specialist Centres</div>
+    <div class="dir-row"><span class="dir-dot c"></span><div class="dir-main"><div class="dir-name">Care Hospitals</div><div class="dir-meta">Gachibowli · Orthopaedics &amp; emergency</div></div><a href="tel:040-3041-8888" class="dir-tail">040-3041-8888</a></div>
+    <div class="dir-row"><span class="dir-dot c"></span><div class="dir-main"><div class="dir-name">MaxCure Hospital</div><div class="dir-meta">Madhapur · Neurosciences &amp; orthopaedics</div></div><a href="tel:040-4499-9999" class="dir-tail">040-4499-9999</a></div>
+    <div class="dir-row"><span class="dir-dot c"></span><div class="dir-main"><div class="dir-name">Citizen Speciality Hospital</div><div class="dir-meta">Nallagandla · General surgery &amp; ICU</div></div><a href="tel:040-4014-4444" class="dir-tail">040-4014-4444</a></div>
+  </div>
+  <div class="info3 fu" style="margin-top:32px">
+    <div class="info-card dark">
+      <div class="info-head">🚨 Emergency Numbers</div>
+      <table class="info-tbl"><tbody><tr><td>All Emergencies (ERSS)</td><td>112</td></tr><tr><td>Ambulance (108 EMS)</td><td>108</td></tr><tr><td>Police</td><td>100</td></tr><tr><td>Fire</td><td>101</td></tr><tr><td>Women's Helpline</td><td>181</td></tr><tr><td>Vandrevala Foundation (Mental Health)</td><td>1860-2662-345</td></tr></tbody></table>
     </div>
-    <div class="hosp-card">
-      <div class="hosp-card-name">Apollo Hospitals</div>
-      <div class="hosp-card-loc">📍 Nanakramguda</div>
-      <a href="tel:040-2360-7777" class="hosp-card-phone">040-2360-7777</a>
-      <div><span class="hosp-spec">Multi-Specialty · JCI Accredited</span></div>
+    <div class="info-card">
+      <div class="info-head">🩺 Who to Go to for What</div>
+      <div class="info-body"><strong>AIG</strong> — gastroenterology &amp; oncology. <strong>Yashoda</strong> — cardiac &amp; neurology. <strong>Care</strong> — orthopaedics &amp; emergency. <strong>MaxCure</strong> — neurosciences. <strong>Continental · Arete</strong> — oncology &amp; transplant. <strong>Apollo · KIMS</strong> — multi-specialty (Apollo is JCI-accredited). Most leading hospitals cluster along the Gachibowli–Nanakramguda–HITEC City corridor.</div>
     </div>
-    <div class="hosp-card">
-      <div class="hosp-card-name">Yashoda Hospitals</div>
-      <div class="hosp-card-loc">📍 HITEC City</div>
-      <a href="tel:040-4567-4567" class="hosp-card-phone">040-4567-4567</a>
-      <div><span class="hosp-spec">Cardiac · Neurology</span></div>
-    </div>
-    <div class="hosp-card">
-      <div class="hosp-card-name">Care Hospitals</div>
-      <div class="hosp-card-loc">📍 Gachibowli</div>
-      <a href="tel:040-3041-8888" class="hosp-card-phone">040-3041-8888</a>
-      <div><span class="hosp-spec">Orthopaedics · Emergency</span></div>
-    </div>
-    <div class="hosp-card">
-      <div class="hosp-card-name">KIMS Hospitals</div>
-      <div class="hosp-card-loc">📍 Kondapur</div>
-      <a href="tel:040-4488-5000" class="hosp-card-phone">040-4488-5000</a>
-      <div><span class="hosp-spec">Multi-Specialty</span></div>
-    </div>
-    <div class="hosp-card">
-      <div class="hosp-card-name">Citizen Speciality Hospital</div>
-      <div class="hosp-card-loc">📍 Nallagandla</div>
-      <a href="tel:040-4014-4444" class="hosp-card-phone">040-4014-4444</a>
-      <div><span class="hosp-spec">General Surgery · ICU</span></div>
-    </div>
-    <div class="hosp-card">
-      <div class="hosp-card-name">Continental Hospitals</div>
-      <div class="hosp-card-loc">📍 Nanakramguda</div>
-      <a href="tel:040-6700-0000" class="hosp-card-phone">040-6700-0000</a>
-      <div><span class="hosp-spec">Oncology · Transplant</span></div>
-    </div>
-    <div class="hosp-card">
-      <div class="hosp-card-name">MaxCure Hospital</div>
-      <div class="hosp-card-loc">📍 Madhapur</div>
-      <a href="tel:040-4499-9999" class="hosp-card-phone">040-4499-9999</a>
-      <div><span class="hosp-spec">Neurosciences · Ortho</span></div>
-    </div>
-    <div class="hosp-card">
-      <div class="hosp-card-name">Arete Hospitals</div>
-      <div class="hosp-card-loc">📍 Gachibowli</div>
-      <a href="tel:040-6726-6726" class="hosp-card-phone">040-6726-6726</a>
-      <div><span class="hosp-spec">Multi-Specialty · Oncology</span></div>
+    <div class="info-card">
+      <div class="info-head">🛡️ IKAN Support</div>
+      <div class="info-body">Your assigned IKAN consultant is available throughout your settling-in period for any queries — from lease negotiations to school admissions, and from mapping your insurer's cashless network to the best hospital near home. Reach us at <strong>enquiry@ikan.com</strong> or <strong>www.ikan.com</strong>.</div>
     </div>
   </div>
-  <div class="emg-grid fu" style="margin-top:32px">
-    <div class="emg-card">
-      <div class="chip chip-acc" style="margin-bottom:10px">Emergency</div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--teal2);margin-bottom:12px">Emergency Numbers — Hyderabad</div>
-<table class="etbl"><tbody><tr><td>All Emergencies</td><td><strong>112</strong></td></tr><tr><td>Ambulance</td><td><strong>108</strong></td></tr><tr><td>Police</td><td><strong>100</strong></td></tr><tr><td>Fire</td><td><strong>101</strong></td></tr><tr><td>Women's Helpline</td><td><strong>181</strong></td></tr><tr><td>Vandrevala Foundation (Mental Health)</td><td><strong>1860-2662-345</strong></td></tr></tbody></table>
-    </div>
-    <div class="emg-card emg-card-ikan">
-      <div class="chip chip-sky" style="margin-bottom:10px">IKAN Support</div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:10px">Your IKAN Consultant</div>
-      <p style="font-size:13px;color:rgba(255,255,255,.85);line-height:1.65;margin-bottom:12px">Your assigned IKAN consultant is available throughout your settling-in period for any queries — from lease negotiations to school admissions.</p>
-      <div style="font-size:13px;color:rgba(255,255,255,.9);line-height:2">
-        <div>📧 enquiry@ikan.com</div>
-        <div>🌐 www.ikan.com</div>
-      </div>
-    </div>
 </section>
 <div class="divider"></div>
 <section class="sec s-creamd" id="lifestyle">
   <div class="eyebrow">🍛 Dining, Nightlife &amp; Weekends</div>
-  <h2 class="sec-title">Life in Hyderabad</h2>
+  <h2 class="sec-title"><em>Life</em> in Hyderabad</h2>
   <p class="sec-sub">Hyderabad delivers a quality of daily life that consistently surprises most arrivals — a sophisticated restaurant scene, extraordinary heritage, accessible luxury, and one of India's warmest host cultures.</p>
   <div class="photo-strip fu">
-    <img id="img_food1" class="card-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Charminar_front_view.JPG" alt="Charminar heritage food district Hyderabad" width="400" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover">
-    <img id="img_food2" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Niloufer_Caf%C3%A9_1.jpg" alt="Niloufer Café irani chai Hyderabad iconic" width="400" height="180" loading="lazy">
-    <img id="img_food3" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20Green%20Walkway%20in%20Botanical%20Garden%20Hyderabad%20Telangana.jpg" alt="Botanical Garden green walkway Kothaguda Hyderabad" width="400" height="180" loading="lazy" referrerpolicy="no-referrer">
-    <img id="img_food4" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/IKEA%20showroom%2C%20Hyderabad%2017032019.jpg" alt="IKEA store Hyderabad" width="400" height="180" loading="lazy" referrerpolicy="no-referrer">
+    <img id="img_food1" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Charminar_front_view.JPG/1920px-Charminar_front_view.JPG" alt="Charminar heritage food district Hyderabad" width="400" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Charminar_front_view.JPG'">
+    <img id="img_food2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Niloufer_Caf%C3%A9_1.jpg/1280px-Niloufer_Caf%C3%A9_1.jpg" alt="Niloufer Café irani chai Hyderabad iconic" width="400" height="180" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Niloufer_Caf%C3%A9_1.jpg'">
+    <img id="img_food3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/A_Green_Walkway_in_Botanical_Garden_Hyderabad_Telangana.jpg/1280px-A_Green_Walkway_in_Botanical_Garden_Hyderabad_Telangana.jpg" alt="Botanical Garden green walkway Kothaguda Hyderabad" width="400" height="180" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20Green%20Walkway%20in%20Botanical%20Garden%20Hyderabad%20Telangana.jpg'">
+    <img id="img_food4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/IKEA_showroom%2C_Hyderabad_17032019.jpg/1280px-IKEA_showroom%2C_Hyderabad_17032019.jpg" alt="IKEA store Hyderabad" width="400" height="180" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/IKEA%20showroom%2C%20Hyderabad%2017032019.jpg'">
   </div>
   <div class="g3 fu">
     <div class="card">
@@ -1544,30 +1782,30 @@ body{counter-reset:ikch}
   </div>
   <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--teal);margin:36px 0 20px" class="fu">Weekend Escapes</h3>
   <div class="g4 fu">
-    <div class="card"><img id="img_cult1" class="card-img-sm" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ananthagiri%20Hills.JPG" alt="Ananthagiri Hills near Vikarabad Telangana" width="400" height="180" loading="lazy" referrerpolicy="no-referrer"><div class="card-body"><div class="chip chip-green">100 km · 2.5 hr drive</div><div class="card-title">Ananthagiri Hills</div><div class="card-desc">Cool, forested hills near Vikarabad — trekking trails, coffee, and the source of the Musi river. The closest true escape from the city.</div></div></div>
-    <div class="card"><img id="img_cult2" class="card-img-sm" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Srisailam-temple-entrance.jpg" alt="Srisailam Mallikarjuna temple Andhra Pradesh" width="400" height="180" loading="lazy" referrerpolicy="no-referrer"><div class="card-body"><div class="chip chip-sky">180 km · 4 hr drive</div><div class="card-title">Srisailam</div><div class="card-desc">Ancient Mallikarjuna Jyotirlinga temple on the Krishna, a major dam, and the Nallamala tiger reserve — pilgrimage and wilderness in one trip.</div></div></div>
-    <div class="card"><img id="img_cult3" class="card-img-sm" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/NagarjunaSagarDam.JPG" alt="Nagarjuna Sagar dam on the Krishna River day trip from Hyderabad" width="400" height="180" loading="lazy"><div class="card-body"><div class="chip chip-acc">180 km · 3.5 hr drive</div><div class="card-title">Nagarjuna Sagar</div><div class="card-desc">A major masonry dam on the Krishna River — a multipurpose irrigation and hydroelectric project, with a scenic reservoir and the Buddhist heritage island of Nagarjunakonda.</div></div></div>
-    <div class="card"><img id="img_cult4" class="card-img-sm" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Boats%20sailing%20on%20Chirala%20beach.jpg" alt="Chirala beach Bay of Bengal Andhra Pradesh" width="400" height="180" loading="lazy" referrerpolicy="no-referrer"><div class="card-body"><div class="chip chip-gold">270 km · 5 hr drive</div><div class="card-title">Chirala Beach</div><div class="card-desc">A quiet stretch of Bay of Bengal coastline — casuarina groves, fishing boats, and uncrowded sands. A relaxed weekend by the sea.</div></div></div>
+    <div class="card"><img id="img_cult1" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Ananthagiri_Hills.JPG/1280px-Ananthagiri_Hills.JPG" alt="Ananthagiri Hills near Vikarabad Telangana" width="400" height="180" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Ananthagiri%20Hills.JPG'"><div class="card-body"><div class="chip chip-green">100 km · 2.5 hr drive</div><div class="card-title">Ananthagiri Hills</div><div class="card-desc">Cool, forested hills near Vikarabad — trekking trails, coffee, and the source of the Musi river. The closest true escape from the city.</div></div></div>
+    <div class="card"><img id="img_cult2" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Srisailam-temple-entrance.jpg/1280px-Srisailam-temple-entrance.jpg" alt="Srisailam Mallikarjuna temple Andhra Pradesh" width="400" height="180" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Srisailam-temple-entrance.jpg'"><div class="card-body"><div class="chip chip-sky">180 km · 4 hr drive</div><div class="card-title">Srisailam</div><div class="card-desc">Ancient Mallikarjuna Jyotirlinga temple on the Krishna, a major dam, and the Nallamala tiger reserve — pilgrimage and wilderness in one trip.</div></div></div>
+    <div class="card"><img id="img_cult3" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/NagarjunaSagarDam.JPG/1280px-NagarjunaSagarDam.JPG" alt="Nagarjuna Sagar dam on the Krishna River day trip from Hyderabad" width="400" height="180" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/NagarjunaSagarDam.JPG'"><div class="card-body"><div class="chip chip-acc">180 km · 3.5 hr drive</div><div class="card-title">Nagarjuna Sagar</div><div class="card-desc">A major masonry dam on the Krishna River — a multipurpose irrigation and hydroelectric project, with a scenic reservoir and the Buddhist heritage island of Nagarjunakonda.</div></div></div>
+    <div class="card"><img id="img_cult4" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Boats_sailing_on_Chirala_beach.jpg/1280px-Boats_sailing_on_Chirala_beach.jpg" alt="Chirala beach Bay of Bengal Andhra Pradesh" width="400" height="180" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Boats%20sailing%20on%20Chirala%20beach.jpg'"><div class="card-body"><div class="chip chip-gold">270 km · 5 hr drive</div><div class="card-title">Chirala Beach</div><div class="card-desc">A quiet stretch of Bay of Bengal coastline — casuarina groves, fishing boats, and uncrowded sands. A relaxed weekend by the sea.</div></div></div>
   </div>
 </section>
 <div class="divider"></div>
 <section class="sec s-cream" id="culture">
   <div class="eyebrow">🎭 Festivals &amp; Cultural Life</div>
-  <h2 class="sec-title">Hyderabad's Cultural Calendar</h2>
+  <h2 class="sec-title">Hyderabad's <em>Cultural Calendar</em></h2>
   <p class="sec-sub">Living in Hyderabad means immersion in one of India's most sophisticated urban cultures — a unique synthesis of Nizami heritage, Telugu tradition, and a cosmopolitan global outlook.</p>
   <div class="photo-strip fu">
-    <img id="img_fest1" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Bathukamma_Festival.jpg" alt="Bathukamma Telangana flower festival women" width="600" height="180" loading="lazy">
-    <img id="img_fest2" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Diwali%2C_the_lights_of_Festival_in_India.JPG" alt="Diwali festival lights India" width="600" height="180" loading="lazy">
-    <img id="img_fest3" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A_play_of_colors_then_a_dance_at_Holi_India.jpg" alt="Holi festival of colours India" width="600" height="180" loading="lazy">
-    <img id="img_fest4" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Pochamma_Temple_Bonalu_Deity.jpg" alt="Bonalu festival Pochamma temple Hyderabad Telangana" width="600" height="180" loading="lazy">
-    <img id="img_fest5" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20night%20lit%20up%20on%20Makar%20Sankranti%20Uttarayana%20Festival%20with%20Kites%20and%20Lights%20India.jpg" alt="Makar Sankranti kites and lights festival India" width="600" height="180" loading="lazy" referrerpolicy="no-referrer">
-    <img id="img_fest6" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ravana%20Effigy%20on%20Vijayadashami%20Dasara%20Festival%20Jaipur%20Rajasthan%20India%20October%202013.jpg" alt="Dussehra Vijayadashami Ravana effigies festival India" width="600" height="180" loading="lazy" referrerpolicy="no-referrer">
-    <img id="img_fest7" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Christmas%20decoration%2C%20Kolkata%2C%20India%20%282792239278%29.jpg" alt="Christmas decorations India" width="600" height="180" loading="lazy" referrerpolicy="no-referrer">
-    <img id="img_fest8" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Birla%20Mandir%2C%20Hyderabad%2C%20India.JPG" alt="Birla Mandir marble temple Hyderabad" width="600" height="180" loading="lazy" referrerpolicy="no-referrer">
+    <img id="img_fest1" src="https://upload.wikimedia.org/wikipedia/commons/1/17/Bathukamma_Festival.jpg" alt="Bathukamma Telangana flower festival women" width="600" height="180" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Bathukamma_Festival.jpg'">
+    <img id="img_fest2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Diwali%2C_the_lights_of_Festival_in_India.JPG/1280px-Diwali%2C_the_lights_of_Festival_in_India.JPG" alt="Diwali festival lights India" width="600" height="180" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Diwali%2C_the_lights_of_Festival_in_India.JPG'">
+    <img id="img_fest3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/A_play_of_colors_then_a_dance_at_Holi_India.jpg/1280px-A_play_of_colors_then_a_dance_at_Holi_India.jpg" alt="Holi festival of colours India" width="600" height="180" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/A_play_of_colors_then_a_dance_at_Holi_India.jpg'">
+    <img id="img_fest4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Pochamma_Temple_Bonalu_Deity.jpg/1280px-Pochamma_Temple_Bonalu_Deity.jpg" alt="Bonalu festival Pochamma temple Hyderabad Telangana" width="600" height="180" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Pochamma_Temple_Bonalu_Deity.jpg'">
+    <img id="img_fest5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/A_night_lit_up_on_Makar_Sankranti_Uttarayana_Festival_with_Kites_and_Lights_India.jpg/1280px-A_night_lit_up_on_Makar_Sankranti_Uttarayana_Festival_with_Kites_and_Lights_India.jpg" alt="Makar Sankranti kites and lights festival India" width="600" height="180" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20night%20lit%20up%20on%20Makar%20Sankranti%20Uttarayana%20Festival%20with%20Kites%20and%20Lights%20India.jpg'">
+    <img id="img_fest6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Ravana_Effigy_on_Vijayadashami_Dasara_Festival_Jaipur_Rajasthan_India_October_2013.jpg/1280px-Ravana_Effigy_on_Vijayadashami_Dasara_Festival_Jaipur_Rajasthan_India_October_2013.jpg" alt="Dussehra Vijayadashami Ravana effigies festival India" width="600" height="180" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Ravana%20Effigy%20on%20Vijayadashami%20Dasara%20Festival%20Jaipur%20Rajasthan%20India%20October%202013.jpg'">
+    <img id="img_fest7" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Christmas_decoration%2C_Kolkata%2C_India_%282792239278%29.jpg" alt="Christmas decorations India" width="600" height="180" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Christmas%20decoration%2C%20Kolkata%2C%20India%20%282792239278%29.jpg'">
+    <img id="img_fest8" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Birla_Mandir%2C_Hyderabad%2C_India.JPG/1280px-Birla_Mandir%2C_Hyderabad%2C_India.JPG" alt="Birla Mandir marble temple Hyderabad" width="600" height="180" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Birla%20Mandir%2C%20Hyderabad%2C%20India.JPG'">
   </div>
   <div class="g3 fu">
     <div class="card">
-      <img id="img_wk2" class="card-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Hyderabad_bonalu_series_%283%29.jpg" alt="Bonalu festival Chowmahalla Palace Hyderabad" width="500" height="145" loading="lazy">
+      <img id="img_wk2" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Hyderabad_bonalu_series_%283%29.jpg/1280px-Hyderabad_bonalu_series_%283%29.jpg" alt="Bonalu festival Chowmahalla Palace Hyderabad" width="500" height="145" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Hyderabad_bonalu_series_%283%29.jpg'">
       <div class="card-body">
         <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--acc);margin-bottom:5px">July – August</div>
         <div class="card-title">Bonalu — Hyderabad's Own Festival</div>
@@ -1575,7 +1813,7 @@ body{counter-reset:ikch}
       </div>
     </div>
     <div class="card">
-      <img id="img_wk3" class="card-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Minaret_of_the_Mecca_Masjid.jpg" alt="Mecca Masjid Hyderabad Ramadan Eid" width="500" height="145" loading="lazy">
+      <img id="img_wk3" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Minaret_of_the_Mecca_Masjid.jpg/1280px-Minaret_of_the_Mecca_Masjid.jpg" alt="Mecca Masjid Hyderabad Ramadan Eid" width="500" height="145" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Minaret_of_the_Mecca_Masjid.jpg'">
       <div class="card-body">
         <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--acc);margin-bottom:5px">Varies — Islamic calendar</div>
         <div class="card-title">Ramadan &amp; Eid — Old City at Its Best</div>
@@ -1583,7 +1821,7 @@ body{counter-reset:ikch}
       </div>
     </div>
     <div class="card">
-      <img id="img_wk4" class="card-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Hussain%20Sagar%20Lake%202.jpg" alt="Hussain Sagar tank bund Hyderabad Literary Festival" width="500" height="145" loading="lazy">
+      <img id="img_wk4" class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Hussain_Sagar_Lake_2.jpg/1280px-Hussain_Sagar_Lake_2.jpg" alt="Hussain Sagar tank bund Hyderabad Literary Festival" width="500" height="145" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Hussain%20Sagar%20Lake%202.jpg'">
       <div class="card-body">
         <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--acc);margin-bottom:5px">January</div>
         <div class="card-title">Hyderabad Literary Festival</div>
@@ -1595,45 +1833,26 @@ body{counter-reset:ikch}
 
 <section class="sec s-creamd" id="lingo">
   <div class="eyebrow">🗣️ Local Knowledge</div>
-  <h2 class="sec-title fu">Speak the City — Hyderabadi Hindi</h2>
+  <h2 class="sec-title fu">Speak the City — <em>Hyderabadi Hindi</em></h2>
   <p class="sec-sub fu">Hyderabad runs on its own dialect — Dakhani (Hyderabadi Hindi) — a warm blend of Urdu, Telugu, Marathi and Persian. Learning even five terms earns instant goodwill and marks you as a resident, not just a visitor. Your new Hyderabadi colleagues will test you on this within the first week. The dialect gained national prominence through the cult 2006 film <em>The Angrez</em> and is loved across all communities in the city.</p>
   
-  <div class="g3 fu" style="gap:14px;margin-bottom:24px">
-    <div class="card card-sky"><div class="card-body">
-      <div class="chip chip-sky" style="margin-bottom:10px">Daily Use</div>
-      <div class="card-title">The Essentials</div>
-      <div class="card-desc"><div style="display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:12px;align-items:baseline">
-        <strong style="color:var(--teal)">Hau</strong><span>Yes (from Marathi — used everywhere)</span>
-        <strong style="color:var(--teal)">Nakko</strong><span>No / I don't want</span>
-        <strong style="color:var(--teal)">Kaiku?</strong><span>Why? / For what? (replaces "kyun")</span>
-        <strong style="color:var(--teal)">Mereku / Tereku</strong><span>To me / To you (like "mujhe/tujhe")</span>
-        <strong style="color:var(--teal)">Aiseich</strong><span>Just like that / that's how it is</span>
-        <strong style="color:var(--teal)">Hallu hallu</strong><span>Slowly / take it easy (go slow)</span>
-      </div></div>
-    </div></div>
-    <div class="card card-gold"><div class="card-body">
-      <div class="chip chip-gold" style="margin-bottom:10px">Vibes &amp; Compliments</div>
-      <div class="card-title">Earn Instant Points</div>
-      <div class="card-desc"><div style="display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:12px;align-items:baseline">
-        <strong style="color:#7a5010">Lite lo yaaro</strong><span>Take it easy / don't stress — the Hyderabadi philosophy</span>
-        <strong style="color:#7a5010">Ustaad</strong><span>Friend / buddy / bro — universal warmth</span>
-        <strong style="color:#7a5010">Kiraak</strong><span>Awesome / excellent — highest praise</span>
-        <strong style="color:#7a5010">Chindiya kar diye</strong><span>You nailed it / crushed it</span>
-        <strong style="color:#7a5010">Biryani ki kasam</strong><span>I swear on the biryani — the sacred oath</span>
-        <strong style="color:#7a5010">Yaaro</strong><span>Friend (singular AND plural — very casual)</span>
-      </div></div>
-    </div></div>
-    <div class="card card-navy"><div class="card-body">
-      <div class="chip chip-lt" style="margin-bottom:10px">Expressions</div>
-      <div class="card-title" style="color:#fff">When Things Go Sideways</div>
-      <div class="card-desc" style="color:rgba(255,255,255,.8)"><div style="display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:12px;align-items:baseline">
-        <strong style="color:var(--sky)">Baigan ki baatan</strong><span>Talking nonsense / rubbish</span>
-        <strong style="color:var(--sky)">Gicchi ho gayi</strong><span>Things got messy / complicated</span>
-        <strong style="color:var(--sky)">Haula mat bano</strong><span>Don't be silly / clueless</span>
-        <strong style="color:var(--sky)">Dimag kharab mat kar</strong><span>Don't irritate me</span>
-        <strong style="color:var(--sky)">Uno kya kiye maloom?</strong><span>Do you know what they did? (gossip opener)</span>
-      </div></div>
-    </div></div>
+  <div class="phrasebook fu">
+    <div class="phrase"><div class="phrase-native">నమస్కారం</div><div class="phrase-body"><span class="phrase-label">Greeting</span><div class="phrase-roman">Namaskaram</div><div class="phrase-mean">Hello / Good day — the universal Telugu greeting that instantly delights locals</div></div></div>
+    <div class="phrase"><div class="phrase-native">ధన్యవాదాలు</div><div class="phrase-body"><span class="phrase-label">Thanks</span><div class="phrase-roman">Dhanyavadalu</div><div class="phrase-mean">Thank you</div></div></div>
+    <div class="phrase"><div class="phrase-native">ఎలా ఉన్నారు?</div><div class="phrase-body"><span class="phrase-label">Wellbeing</span><div class="phrase-roman">Ela unnaru?</div><div class="phrase-mean">How are you?</div></div></div>
+    <div class="phrase"><div class="phrase-native">అవును / కాదు</div><div class="phrase-body"><span class="phrase-label">Yes / No</span><div class="phrase-roman">Avunu / Kaadu</div><div class="phrase-mean">Yes / No</div></div></div>
+    <div class="phrase"><div class="phrase-native">అన్నీ ఎంత?</div><div class="phrase-body"><span class="phrase-label">Markets</span><div class="phrase-roman">Anni enta?</div><div class="phrase-mean">How much for all? (markets)</div></div></div>
+    <div class="phrase"><div class="phrase-native">కొంచెం తగ్గించండి</div><div class="phrase-body"><span class="phrase-label">Bargaining</span><div class="phrase-roman">Konchem tagginchandi</div><div class="phrase-mean">Please reduce the price a little</div></div></div>
+    <div class="phrase"><div class="phrase-native">హౌ</div><div class="phrase-body"><span class="phrase-label">Daily Use</span><div class="phrase-roman">Hau</div><div class="phrase-mean">Yes (Dakhani, from Marathi — used everywhere)</div></div></div>
+    <div class="phrase"><div class="phrase-native">నక్కో</div><div class="phrase-body"><span class="phrase-label">Daily Use</span><div class="phrase-roman">Nakko</div><div class="phrase-mean">No / I don&rsquo;t want</div></div></div>
+    <div class="phrase"><div class="phrase-native">కైకు?</div><div class="phrase-body"><span class="phrase-label">Daily Use</span><div class="phrase-roman">Kaiku?</div><div class="phrase-mean">Why? / For what? (replaces &ldquo;kyun&rdquo;)</div></div></div>
+    <div class="phrase"><div class="phrase-native">హల్లు హల్లు</div><div class="phrase-body"><span class="phrase-label">Daily Use</span><div class="phrase-roman">Hallu hallu</div><div class="phrase-mean">Slowly / take it easy (go slow)</div></div></div>
+    <div class="phrase"><div class="phrase-native">లైట్ లో యారో</div><div class="phrase-body"><span class="phrase-label">Vibes</span><div class="phrase-roman">Lite lo yaaro</div><div class="phrase-mean">Take it easy / don&rsquo;t stress — the Hyderabadi philosophy</div></div></div>
+    <div class="phrase"><div class="phrase-native">ఉస్తాద్</div><div class="phrase-body"><span class="phrase-label">Compliment</span><div class="phrase-roman">Ustaad</div><div class="phrase-mean">Friend / buddy / bro — universal warmth</div></div></div>
+    <div class="phrase"><div class="phrase-native">కిరాక్</div><div class="phrase-body"><span class="phrase-label">Compliment</span><div class="phrase-roman">Kiraak</div><div class="phrase-mean">Awesome / excellent — the highest praise</div></div></div>
+    <div class="phrase"><div class="phrase-native">బిర్యానీ కి కసమ్</div><div class="phrase-body"><span class="phrase-label">Compliment</span><div class="phrase-roman">Biryani ki kasam</div><div class="phrase-mean">I swear on the biryani — the sacred oath</div></div></div>
+    <div class="phrase"><div class="phrase-native">హౌలా మత్ బనో</div><div class="phrase-body"><span class="phrase-label">Expression</span><div class="phrase-roman">Haula mat bano</div><div class="phrase-mean">Don&rsquo;t be silly / clueless</div></div></div>
+    <div class="phrase"><div class="phrase-native">దిమాగ్ ఖరాబ్ మత్ కర్</div><div class="phrase-body"><span class="phrase-label">Expression</span><div class="phrase-roman">Dimag kharab mat kar</div><div class="phrase-mean">Don&rsquo;t irritate me</div></div></div>
   </div>
 
   <div class="fu" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
@@ -1675,12 +1894,12 @@ body{counter-reset:ikch}
 </section>
 <div class="divider"></div><section class="sec s-cream" id="weekends">
   <div class="eyebrow">✈️ Weekend Travel</div>
-  <h2 class="sec-title fu">Weekend Escapes from Hyderabad</h2>
+  <h2 class="sec-title fu">Weekend <em>Escapes</em> from Hyderabad</h2>
   <p class="sec-sub fu">Hyderabad's central Deccan location puts beaches, hill stations, backwaters, and heritage valleys within a short flight or overnight train. These four destinations are used regularly by Hyderabad's expat and professional community.</p>
   <div class="g4 fu" style="gap:20px">
 
     <div class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Houseboat%20on%20Alleppey%20backwaters%20%28Kerala%2C%20India%202023%29%20%2852704323376%29.jpg" alt="Kerala houseboat backwaters Alleppey" width="600" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Houseboat_on_Alleppey_backwaters_%28Kerala%2C_India_2023%29_%2852704323376%29.jpg/1280px-Houseboat_on_Alleppey_backwaters_%28Kerala%2C_India_2023%29_%2852704323376%29.jpg" alt="Kerala houseboat backwaters Alleppey" width="600" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Houseboat%20on%20Alleppey%20backwaters%20%28Kerala%2C%20India%202023%29%20%2852704323376%29.jpg'">
       <div class="card-body" style="padding:22px">
         <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
           <span class="chip chip-green">1.5 hrs · Flight</span>
@@ -1700,7 +1919,7 @@ body{counter-reset:ikch}
     </div>
 
     <div class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Palolem%20beach.jpg" alt="Palolem Beach Goa" width="600" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Palolem_beach.jpg" alt="Palolem Beach Goa" width="600" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Palolem%20beach.jpg'">
       <div class="card-body" style="padding:22px">
         <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
           <span class="chip chip-green">1 hr · Flight</span>
@@ -1720,7 +1939,7 @@ body{counter-reset:ikch}
     </div>
 
     <div class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Munnar%20tea%20gardens.jpg" alt="Munnar tea plantations hills Kerala" width="600" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Munnar_tea_gardens.jpg/1280px-Munnar_tea_gardens.jpg" alt="Munnar tea plantations hills Kerala" width="600" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Munnar%20tea%20gardens.jpg'">
       <div class="card-body" style="padding:22px">
         <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
           <span class="chip chip-green">1.5 hrs · Flight + Drive</span>
@@ -1740,7 +1959,7 @@ body{counter-reset:ikch}
     </div>
 
     <div class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Wodden_toys_of_girijan._at_Araku_%283%29.JPG" alt="Araku Valley train journey Andhra Pradesh" width="600" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Wodden_toys_of_girijan._at_Araku_%283%29.JPG/1280px-Wodden_toys_of_girijan._at_Araku_%283%29.JPG" alt="Araku Valley train journey Andhra Pradesh" width="600" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Wodden_toys_of_girijan._at_Araku_%283%29.JPG'">
       <div class="card-body" style="padding:22px">
         <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
           <span class="chip chip-green">12 hrs · Overnight Train</span>
@@ -1761,7 +1980,7 @@ body{counter-reset:ikch}
 
   </div>
     <div class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Vittala_temple_Hampi.jpg" alt="Vittala Temple Hampi ruins Karnataka" width="600" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Vittala_temple_Hampi.jpg/1280px-Vittala_temple_Hampi.jpg" alt="Vittala Temple Hampi ruins Karnataka" width="600" height="180" loading="lazy" style="width:100%;height:180px;object-fit:cover" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Vittala_temple_Hampi.jpg'">
       <div class="card-body" style="padding:22px">
         <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
           <span class="chip chip-sky">6 hrs · Drive / Overnight train</span>
@@ -1775,7 +1994,7 @@ body{counter-reset:ikch}
 <div class="divider"></div>
 <section class="sec s-cream" id="flights">
   <div class="eyebrow">🛫 Air Connectivity</div>
-  <h2 class="sec-title">Flying from Hyderabad</h2>
+  <h2 class="sec-title">Flying from <em>Hyderabad</em></h2>
   <p class="sec-sub">Rajiv Gandhi International Airport (HYD) connects directly to all major Indian cities and key international hubs. Fares below are indicative economy return, booked 7–14 days ahead.</p>
   <div class="fu" style="display:grid;grid-template-columns:1fr 1.6fr;gap:36px;align-items:start">
     <div>
@@ -1837,7 +2056,7 @@ body{counter-reset:ikch}
       <div class="metro-line"><div class="metro-dot" style="background:#1e88e5"></div> Blue Line — Nagole ↔ Raidurg (27km, 23 stations)</div>
       <div class="metro-line"><div class="metro-dot" style="background:#43a047"></div> Green Line — JBS ↔ MGBS (10km, 9 stations)</div>
     </div>
-    <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Hyderabad_HMR.svg" alt="Hyderabad Metro Rail Phase 1 route map all three lines" class="metro-img" loading="lazy">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Hyderabad_HMR.svg/1280px-Hyderabad_HMR.svg.png" alt="Hyderabad Metro Rail Phase 1 route map all three lines" class="metro-img" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Hyderabad_HMR.svg'">
     <div class="metro-note">
       📍 <strong>Key stops for western corridor residents:</strong> HITEC City &amp; Raidurg (Blue Line) · Ameerpet interchange (Red ↔ Blue) · Jubilee Hills Rd No.5 (Blue) · Kukatpally (Red) — 
       Fares: ₹10–60 single journey. Smart Card loaded in ₹50 multiples (max ₹3,000). Daily ridership: 5+ lakh.
@@ -1867,7 +2086,7 @@ body{counter-reset:ikch}
 </section>
 <div class="divider"></div><section class="sec s-dark" id="climate">
   <div class="eyebrow eyebrow-lt">🌤️ Weather &amp; Climate</div>
-  <h2 class="sec-title sec-title-lt">Hyderabad's Climate</h2>
+  <h2 class="sec-title sec-title-lt">Hyderabad's <em>Climate</em></h2>
   <p class="sec-sub sec-sub-lt">At 540m above sea level on the Deccan Plateau, Hyderabad has a semi-arid tropical climate — pleasantly cool winters, hot dry summers, and a well-distributed monsoon that fills the city's lakes and turns the landscape green.</p>
   <div class="icon-stats-row fu">
     <div class="istat"><span class="is-icon">&#127777;&#65039;</span><div class="is-val">15–40°C</div><div class="is-label">Annual range</div></div>
@@ -1917,7 +2136,6 @@ body{counter-reset:ikch}
   <div class="rf-grid fu">
     <div class="rf-card"><span class="rf-icon">&#128663;</span><div class="rf-title">Traffic Worse Than It Looks on Maps</div><div class="rf-body">HITEC City internal roads and Jubilee Hills junctions congest significantly at peak hours. A 10km journey can take 45 minutes at 9am. <strong>Always conduct a trial commute before signing your lease.</strong> The western corridor is the most congested zone — factor this in carefully.</div></div>
     <div class="rf-card"><span class="rf-icon">&#127811;</span><div class="rf-title">Summer Heat Requires Full AC Infrastructure</div><div class="rf-body">April–June temperatures reach 38–40°C. <strong>Always verify your apartment has full AC in every room, DG power backup for the AC, and no water shortage history in the hot months</strong> before signing. This is the most common issue reported by newly arrived professionals who signed leases in cooler months.</div></div>
- <strong></strong> </div></div>
     <div class="rf-card"><span class="rf-icon">&#127986;&#65039;</span><div class="rf-title">Old City Navigation Is a Different World</div><div class="rf-body">The Charminar and Old City area has extremely narrow, congested roads. <strong>Never attempt to drive to Old City — always take an Ola/Uber and walk the final 500m.</strong> Visit on a weekday morning for the best experience. Friday afternoons are extremely congested.</div></div>
     <div class="rf-card"><span class="rf-icon">&#128167;</span><div class="rf-title">🌧️ Monsoon Flooding in Low-Lying Areas</div><div class="rf-body">Himayatnagar, Falaknuma, and parts of Kukatpally flood during August–September monsoon peaks. <strong>Check the specific building's flood history</strong> — not just the neighbourhood — before signing any lease.</div></div>
     <div class="rf-card"><span class="rf-icon">&#128246;</span><div class="rf-title">Telugu Language Outside Expat Zones</div><div class="rf-body">Daily life outside HITEC City and Jubilee Hills operates primarily in Telugu or Urdu. English is widely spoken in the tech corridor but less so elsewhere. <strong>Learning basic Telugu greetings</strong> is warmly received and genuinely helpful.</div></div>
@@ -1929,7 +2147,7 @@ body{counter-reset:ikch}
 </section>
 <section class="sec s-creamd" id="apps">
   <div class="eyebrow">📱 Digital Life</div>
-  <h2 class="sec-title fu">Essential Apps — Hyderabad</h2>
+  <h2 class="sec-title fu">Essential <em>Apps</em> — Hyderabad</h2>
   <p class="sec-sub fu">India is one of the world's most mobile-first countries. Set up these apps in your first week and your daily life will run itself.</p>
   <div class="phsec fu">
     <div class="ph">
@@ -2004,9 +2222,9 @@ body{counter-reset:ikch}
 <div class="fu" style="margin:32px 0">
   <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:12px">🗺️ Outer Ring Road — Node Map</div>
   <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border)">
-    <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Hyderabad_Outer_Ring_Road_and_its_radial_roads.png" 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Hyderabad_Outer_Ring_Road_and_its_radial_roads.png/1280px-Hyderabad_Outer_Ring_Road_and_its_radial_roads.png" 
          alt="Hyderabad Outer Ring Road ORR radial roads map all nodes" 
-         style="width:100%;display:block;max-height:400px;object-fit:contain;background:#eaf6f5" loading="lazy">
+         style="width:100%;display:block;max-height:400px;object-fit:contain;background:#eaf6f5" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Hyderabad_Outer_Ring_Road_and_its_radial_roads.png'">
     <div style="padding:14px 18px;background:var(--skyp);font-size:12px;color:var(--muted);line-height:1.7">
       <strong style="color:var(--teal)">Key ORR nodes for residents:</strong> Node 1 (Raidurg) — Banjara/Jubilee Hills · Node 2 (Gachibowli) — Financial District/Kondapur · Node 3 (Narsingi) — Manikonda/Kokapet · Node 14 (Tukkuguda) — Airport South approach. <strong>Airport from HITEC City:</strong> ORR via Node 2 → Node 14 ≈ 35–45 min. Toll: ₹95–₹175 per trip by vehicle class.
     </div>
@@ -2043,10 +2261,10 @@ body{counter-reset:ikch}
 <div class="divider"></div>
 <section class="sec s-cream" id="practical">
   <div class="eyebrow">📋 Settling In</div>
-  <h2 class="sec-title">Your First 60 Days Checklist</h2>
+  <h2 class="sec-title">Your First <em>60 Days</em> Checklist</h2>
   <p class="sec-sub">Moving within India to Hyderabad has specific requirements — particularly around Aadhaar update, vehicle registration, and the Telangana-specific documentation. Here is the correct sequence.</p>
   <div class="g-side-rev fu">
-    <div><img id="img_docs" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Panorama%20of%20Hyderabad%20skyline%20from%20Gandipet.jpg" alt="Hyderabad city panorama skyline Gandipet" style="width:100%;height:220px;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;" loading="lazy"></div>
+    <div><img id="img_docs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panorama_of_Hyderabad_skyline_from_Gandipet.jpg/1280px-Panorama_of_Hyderabad_skyline_from_Gandipet.jpg" alt="Hyderabad city panorama skyline Gandipet" style="width:100%;height:220px;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Panorama%20of%20Hyderabad%20skyline%20from%20Gandipet.jpg'"></div>
     <div>
       <div class="steps">
         <div class="step"><div class="step-num">1</div><div class="step-content"><div class="step-title">Aadhaar Address Update</div><div class="step-desc">Update your Aadhaar to your new Hyderabad address within the first month via the UIDAI portal (uidai.gov.in). Required for bank updates, school admissions, vehicle registration transfer, and voter ID change.</div></div></div>
@@ -2083,7 +2301,7 @@ body{counter-reset:ikch}
 </section>
 <section class="sec s-dark">
   <div class="eyebrow eyebrow-lt">Emergency &amp; Support</div>
-  <h2 class="sec-title sec-title-lt">Emergency Contacts — Hyderabad</h2>
+  <h2 class="sec-title sec-title-lt">Emergency <em>Contacts</em> — Hyderabad</h2>
   <p class="sec-sub sec-sub-lt">Save all of these before your first day. Your IKAN consultant is your first call in any non-medical emergency.</p>
   <div class="g3 fu">
     <div><table class="etbl"><tbody>
@@ -2117,7 +2335,7 @@ body{counter-reset:ikch}
     </div>
   </div>
 </section>
-<img id="img_apps" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Waverock_Bridge%2C_Hyderabad%2C_India_14.jpg" alt="Waverock tech park Hyderabad Financial District" referrerpolicy="no-referrer" width="1400" height="260" loading="lazy">
+<img id="img_apps" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/The_Waverock_Bridge%2C_Hyderabad%2C_India_14.jpg/1280px-The_Waverock_Bridge%2C_Hyderabad%2C_India_14.jpg" alt="Waverock tech park Hyderabad Financial District" referrerpolicy="no-referrer" width="1400" height="260" loading="lazy" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Waverock_Bridge%2C_Hyderabad%2C_India_14.jpg'">
 <div class="callout-band">
   <div class="callout-band-text">"IKAN — making every relocation seamless."</div>
   <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:8px">
@@ -2125,6 +2343,15 @@ body{counter-reset:ikch}
     <span style="color:rgba(255,255,255,.9);font-size:13px">🌐 www.IKAN.com</span>
   </div>
 </div>
+<section class="sec s-cream fu" id="closing" style="padding-top:36px">
+  <div class="closing-band">
+    <div class="closing-eyebrow">The team on the ground</div>
+    <h2 class="closing-title">Hyderabad isn&rsquo;t just your next posting.<br>It&rsquo;s your next <em>chapter</em>.</h2>
+    <p class="closing-body">From your first plate of Paradise biryani to settling into a HITEC City apartment, the move is a hundred small decisions made far from home. IKAN&rsquo;s Hyderabad team handles the paperwork, the landlords, and the logistics on the ground — so you arrive ready to live, not just to unpack.</p>
+    <a class="closing-cta" href="mailto:enquiry@ikan.com">Start your Hyderabad move &rarr;</a>
+    <div class="closing-meta">enquiry@ikan.com&nbsp;&nbsp;·&nbsp;&nbsp;www.ikan.com&nbsp;&nbsp;·&nbsp;&nbsp;IKAN Relocation</div>
+  </div>
+</section>
 <footer class="footer">
   <div><div class="f-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 686.8" aria-label="IKAN" role="img"><g fill="#acd6d4"><path d="M666.08,532.3c-18.72,0-35.4-3.18-50.05-9.53-14.66-6.36-26.32-15.71-34.96-28.07-8.65-12.35-12.97-27.36-12.97-45.02s4.32-32.92,12.97-44.75c8.65-11.83,20.48-20.74,35.49-26.75,15-6,32.04-9,51.11-9h79.44v-16.95c0-15.18-4.59-27.36-13.78-36.54-9.19-9.18-23.3-13.77-42.37-13.77s-33.02,4.42-42.9,13.24c-9.89,8.83-16.42,20.31-19.59,34.43l-50.84-16.42c4.23-14.12,11.03-26.92,20.39-38.4,9.35-11.47,21.8-20.74,37.33-27.81,15.54-7.06,34.25-10.59,56.15-10.59,33.89,0,60.55,8.66,79.97,25.95,19.42,17.3,29.13,41.84,29.13,73.62v107.51c0,10.59,4.93,15.89,14.82,15.89h22.25v30.46c0,8.33-6.76,15.09-15.09,15.09h-25.7c-12.36,0-22.43-3.18-30.18-9.53-7.77-6.36-11.65-15-11.65-25.95v-1.59h-7.94c-2.83,5.3-7.08,11.48-12.71,18.54-5.66,7.07-13.95,13.16-24.9,18.27-10.94,5.11-25.42,7.68-43.43,7.68Zm7.94-45.02c21.89,0,39.54-6.26,52.96-18.8,13.42-12.53,20.13-29.74,20.13-51.64v-5.3h-76.27c-14.48,0-26.14,3.1-34.95,9.27-8.83,6.18-13.24,15.28-13.24,27.28s4.58,21.54,13.77,28.6c9.18,7.07,21.71,10.59,37.6,10.59Z"/><path d="M877.4,509.8v-246.01h53.49v39.19h8.47c4.94-10.59,13.78-20.47,26.48-29.66,12.71-9.18,31.6-13.77,56.68-13.77,19.77,0,37.33,4.42,52.69,13.24,15.36,8.83,27.45,21.28,36.28,37.34,8.82,16.07,13.24,35.4,13.24,57.99v156.77h-39.45c-8.33,0-15.09-6.76-15.09-15.09v-137.44c0-22.59-5.66-39.28-16.95-50.05-11.3-10.77-26.83-16.15-46.6-16.15-22.6,0-40.7,7.41-54.29,22.24-13.6,14.83-20.39,36.37-20.39,64.62v131.88h-39.46c-8.33,0-15.09-6.76-15.09-15.09Z"/><path d="M154.69,204.78v-50.63h59.18v50.63h-59.18Zm2.03,305.01v-245.88h54.62v260.97h-39.53c-8.33,0-15.09-6.76-15.09-15.09Z"/><rect x="300.11" y="154.2" width="54.56" height="211.32"/><path d="M315.2,524.94h39.47v-108.57h-54.56s0,93.48,0,93.48c0,8.33,6.76,15.09,15.09,15.09Z"/><path d="M418.64,390.42l131.87-126.58h-72.55l-102.75,101.69h-20.55v50.84h20.55l98.33,99.29c5.88,5.94,13.9,9.28,22.25,9.28h58.96l-136.11-134.52Z"/><path d="M245.51,380.61v35.75h54.6s0-50.84,0-50.84h-39.5c-8.33,0-15.09,6.76-15.09,15.09Z"/></g></svg></div>
   <div class="f-tagline">"Where expertise meets empathy."</div>
@@ -2144,7 +2371,7 @@ body{counter-reset:ikch}
 
 
 
-<script>(function(){var h=document.querySelector(".hero-bg");if(h){h.style.backgroundImage="url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Charminar_front_view.JPG')";h.style.backgroundSize="cover";h.style.backgroundPosition="center";}})()</script>
+<script>(function(){var h=document.querySelector(".hero-bg");if(h){h.style.backgroundImage="url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Charminar_front_view.JPG/1920px-Charminar_front_view.JPG')";h.style.backgroundSize="cover";h.style.backgroundPosition="center";}})()</script>
 
 
 
