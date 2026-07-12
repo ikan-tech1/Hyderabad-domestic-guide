@@ -2638,6 +2638,28 @@ section#climate.s-dark{background-color:#0d3d2a;background-image:var(--pg-field)
    because the legacy link carries an inline style. */
 .s-cream .sec-sub a,.s-creamd .sec-sub a{color:var(--pg-gold-ink)!important}
 </style>
+
+<style id="ikan-guide-engine-mobile-tables">
+/* IKAN-GUIDE-ENGINE-MOBILE-TABLES-V1
+   Auto-injected, systematic mobile table card-reflow.
+   Regenerate via inject_guide_upgrades.py rather than hand-editing.
+   Horizontal scroll (.tbl-scroll) remains the desktop/tablet behavior and
+   the no-JS fallback; below 640px a JS pass (see script with the same
+   marker) auto-labels each cell from its <thead> and this CSS turns each
+   row into a labeled card, per the documented mobile rule that scrolling
+   tables are a fallback, not the goal. */
+@media (max-width: 640px) {
+  .ikan-cardify.tbl-scroll, .ikan-cardify.tbl-wrap { overflow-x: visible !important; box-shadow:none !important; border:none !important; background:transparent !important; }
+  .ikan-cardify.tbl-scroll > table, .ikan-cardify.tbl-wrap > table,
+  table.ikan-cardify { min-width: 0 !important; width: 100% !important; border-collapse: separate !important; border-spacing: 0 10px !important; }
+  .ikan-cardify thead { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; }
+  .ikan-cardify tbody tr { display: block !important; margin-bottom: 12px; border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 8px 22px -14px rgba(19,69,80,.28); border: 1px solid rgba(21,69,80,.08); }
+  .ikan-cardify tbody td { display: flex !important; justify-content: space-between; align-items: center; gap: 14px; padding: 10px 14px !important; text-align: right; border-bottom: 1px solid rgba(21,69,80,.08); }
+  .ikan-cardify tbody td:last-child { border-bottom: none; }
+  .ikan-cardify tbody td::before { content: attr(data-ikan-label); font: 600 10px/1.3 'Space Grotesk', ui-monospace, monospace; text-transform: uppercase; letter-spacing: .04em; color: #134550; opacity: .68; text-align: left; flex: 0 0 auto; }
+  .ikan-cardify tbody td:empty::before { content: none; }
+}
+</style>
 </head>
 
 
@@ -3783,7 +3805,7 @@ section#climate.s-dark{background-color:#0d3d2a;background-image:var(--pg-field)
   <div style="font-size:11px;color:rgba(199,222,212,.85);margin-top:10px;letter-spacing:.5px">Hyderabad India Domestic Move Guide · 2026 Edition</div></div>
   <div style="text-align:center">
     <div style="color:rgba(199,222,212,.85);font-size:10px;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">Confidential · For Assignee Use Only</div>
-    <div style="color:rgba(199,222,212,.85);font-size:10px">Information accurate as of April 2026. Always verify time-sensitive details with IKAN.</div>
+    <div style="color:rgba(199,222,212,.85);font-size:10px">Guide content last structurally reviewed 12 July 2026 &middot; unsourced prose, not yet fact-checked against a primary source &middot; recommended recheck by January 2027 &middot; figures are indicative, IKAN consultants confirm exact rates, admissions and availability before a family acts on them.</div>
   </div>
   <div style="text-align:right">
     <a href="mailto:enquiry@ikan.com" class="f-link">enquiry@ikan.com</a><br>
@@ -4604,6 +4626,34 @@ if (typeof module !== 'undefined' && module.exports) module.exports = IKAN_V10;
       fig.appendChild(cap);
     }
   });
+})();
+</script>
+
+<script id="ikan-guide-engine-mobile-tables-js">
+/* IKAN-GUIDE-ENGINE-MOBILE-TABLES-V1 */
+(function() {
+  function cardify() {
+    document.querySelectorAll('.tbl-scroll table, .tbl-wrap table, table.tbl, table.city-compare').forEach(function(t) {
+      if (t.getAttribute('data-ikan-cardified')) return;
+      var headCells = t.querySelectorAll('thead th');
+      if (!headCells.length) return;
+      var labels = Array.prototype.map.call(headCells, function(th) { return th.textContent.trim(); });
+      t.querySelectorAll('tbody tr').forEach(function(tr) {
+        Array.prototype.forEach.call(tr.children, function(td, i) {
+          if (!td.hasAttribute('data-ikan-label') && labels[i]) td.setAttribute('data-ikan-label', labels[i]);
+        });
+      });
+      t.classList.add('ikan-cardify');
+      var wrap = t.closest('.tbl-scroll, .tbl-wrap');
+      if (wrap) wrap.classList.add('ikan-cardify');
+      t.setAttribute('data-ikan-cardified', '1');
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', cardify);
+  } else {
+    cardify();
+  }
 })();
 </script>
 </body></html>
