@@ -1,4 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    { "source": "/", "destination": "https://hyderabad-domestic.ikan.co.in/", "permanent": false },
+    { "source": "/:path*", "destination": "https://hyderabad-domestic.ikan.co.in/:path*", "permanent": false }
+  ]
 }
